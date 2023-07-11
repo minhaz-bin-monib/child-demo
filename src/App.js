@@ -7,6 +7,8 @@ import Main from "./layout/Main";
 import LoginBootstrap from "./components/LoginBootstrap";
 import OtherSections from "./components/LoginBootstrap";
 import MainSections from "./components/MainSections";
+import AddNurse from "./components/AddNurse";
+import AllNurses from "./components/AllNurses";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,15 @@ const router = createBrowserRouter([
       {
         path : '/login',
         element : <LoginBootstrap></LoginBootstrap>
+      },
+      {
+        path : '/addNurse',
+        element : <AddNurse></AddNurse>
+      },
+      {
+        path : '/nurses',
+        element : <AllNurses></AllNurses>,
+        loader: () => fetch('http://localhost:5000/users')
       }
     ]
   }

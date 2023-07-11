@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import app from '../firebase/firebase.init';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
@@ -43,7 +43,8 @@ const LoginBootstrap = () => {
                 <input type="password" name='password' className="form-control" id="formGroupExampleInput2" placeholder="Your Password" required />
                 
             </div> 
-            {success && <p className='text-success'>Logged in Successfully</p> }
+            {success && <Navigate to="/nurses"></Navigate> }
+            {!success && <p className='text-danger'>Password is wrong</p> }
             <button className='btn btn-primary' type='submit'>Login</button>
             </form>
 

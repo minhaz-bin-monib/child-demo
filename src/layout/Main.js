@@ -25,7 +25,7 @@ const Main = () => {
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#nurse">NURSES</a>
+                                    <a className="nav-link" href="#nurse"><Link to='/nurses'>Nurses</Link></a>
                                 </li>
                             </ul>
                             <form className="d-flex">
