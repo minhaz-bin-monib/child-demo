@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { createContext, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import NurseDetails from './NurseDetails';
+
 
 const AllNurses = () => {
 
     const users = useLoaderData();
     const [displayUsers, setDisplayUsers] = useState(users);
+
+   const userContext = createContext(displayUsers);
 
     const handleDelete = user => {
 
@@ -30,17 +34,23 @@ const AllNurses = () => {
     }
 
     return (
+    
         <div>
-            <h1>hello from all nurses</h1>
-            <h2>Users: {displayUsers.length}</h2>
+            <h1>Total Nurses: {displayUsers.length}</h1>
+            <h2>Nurses List:</h2>
+            
 
-            <div>
+            <div >
                 {
-                    displayUsers.map(user => <p key={user._id}>
-                        {user.name} {user.email} <button onClick={() => handleDelete(user)}>X</button>
-
-                    </p>)
+                    displayUsers.map(user => <div style={{border:'2px solid red', marginBottom:'5px'}}><p key={user._id}> 
+                        <h3>Nurse Name:  {user.name}</h3> <h3>Nurse Email: {user.email}</h3> <button className='btn btn-danger' onClick={() => handleDelete(user)}>Delete</button>
+ 
+                     </p></div> )
                 }
+               
+
+                
+                
             </div>
         </div>
     );

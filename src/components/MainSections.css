@@ -280,3 +280,219 @@ color: #e7193d;
         
 font-weight: 700;
     }
+
+
+
+
+
+
+
+
+
+
+    .our-service{
+        padding: 100px 0px;
+        
+    }
+    .service{
+    border: 5px solid #ebebeb;
+    padding: 30px 27px;
+    margin-bottom: 30px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    }
+    .service:hover{
+    border: 5px solid #f69165;
+    }
+    .service i{
+    float:  left;
+    /* display:  block; */
+    /* margin-right:  5px; */
+    /* margin-bottom:  100px; */
+    /* padding-top: 0; */
+    padding-right: 4px;
+    }
+    .service h1{
+    font-size: 24px;
+    /* padding-top: 17px; */
+    /* display:  inline-block; */
+    margin-bottom: 17px;
+    padding-top: 22px;
+    }
+    .service p{padding: 7px 0px;/* margin-left: 0px; *//* max-width: 750px; */margin-bottom: 8px;}
+    .service a{
+    text-decoration:  none;
+    color: #6f6e6e;
+    font-weight:  bold;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    }
+    .service a:hover{
+    color: #f69165;
+    }
+    .service a span{
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    }
+    .service a:hover span{
+    margin-left: 5px;
+    }
+
+    
+.our-price{
+    background: #f9f9f9;
+    padding: 100px 0;
+}
+.price-content{
+    text-align:  center;
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 5px  #b9b9b96e;
+    /* padding: 25px; */
+    padding:  25px 0px;
+    transition: all 0.3s;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+}
+.price-content:hover{
+    border: 5px solid #ffebf1;
+}
+.price-head{
+    margin:  0 auto;
+    text-align:  center;
+}
+.price-head h2{
+    margin-bottom:  0px;
+    font-size: 30px;
+    color: #00cce1;
+}
+.price-head p{
+    font-size: 16px;
+    color: #707070;
+}
+.price-content .price-package{
+    background:  #fff;
+    /* padding: 0px; */
+}
+.price-package{
+    color: #00cce1;
+    padding: 20px 16px;
+    background:  #fff;
+    margin: 15px 0px;
+        transition: all 0.3s;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+}
+.price-content:hover .price-package {
+    background: #ffebf1;
+    color: #e7193d;
+}
+
+.price-package h1{
+    margin-bottom:  0px;
+    font-size: 45px;
+    letter-spacing: 0px;
+}
+.price-package h1 span{
+    font-size:  24px;
+  
+}
+.price-package span{}
+.price-package p{
+    margin-bottom: 0px;
+    font-weight:  bold;
+}
+.package{}
+.package ul{
+    padding-bottom: 10px;
+    padding-left:  0;
+}
+.package ul li{
+    list-style: none;
+    padding: 5px;
+    color: #707070;
+}
+.package a{}
+.package a button{}
+.price-btn{
+    border:  none;
+    padding: 10px 37px;
+    background: #00cce1;
+    color:  #fff;
+    font-weight:  bold;
+    font-size: 20px;
+}
+.package a .price-btn{}
+
+
+
+
+
+footer{
+    
+padding-top: 50px;
+    
+padding-bottom: 20px;
+    
+background: #ffebf1;
+    
+color: #e7193d;
+}
+
+.footer-control{
+    
+    /* display: flex; */
+        
+    /* align-items: center; */
+        
+    padding-left: 100px;
+    }
+    
+    .img-2{
+    
+    margin-bottom: 15px;
+    }
+    
+    .mrgn{
+        
+    margin-top: 1px;
+    }
+
+    .package a .price-btn:hover {
+        background-color:#e7193d;
+    }
+
+
+    .agency{
+
+    }
+
+
+    .agency h1{
+
+font-size: 36px;
+
+}
+    .agency h2{
+
+font-size: 21px;
+
+}
+    .agency p{
+
+font-size: 15px;
+
+}
+
+
+    .agency .lit-pic{
+
+height: 35px;
+
+}
+
+.mr{
+    
+}

@@ -131,9 +131,146 @@ const MainSections = () => {
             </section>
 
 
-<div class="more">
+            <section class="our-price">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading text-center">
+          <h2>Our Pricing Plan</h2>
+        
+          <p>Corem ipsum dolor what a amet, consectetuer adipiscing elit diam an nonummy laoreet dolore magna aliquam erat volutpat.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="price-content">
+          <div class="price-head">
+            <h2>Business Plan</h2>
+            <p>For Super Professional</p>
+          </div>
+          <div class="price-package">
+            <h1><span>$</span>19.99</h1>
+            <p>Per month</p>
+          </div>
+          <div class="package">
+            <ul >
+              <li>Unimited Pizza</li>
+              <li>Daft punk Every Evenings</li>
+              <li>Full Access Pizza</li>
+              <li>2 Free Farks Every Months</li>
+              <li>Unlimited Burger</li>
+            </ul>
+            <a href="#"><button class="price-btn">SING UP</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="price-content">
+          <div class="price-head">
+            <h2>Enterprise Plan</h2>
+            <p>For Super Professional</p>
+          </div>
+          <div class="price-package">
+            <h1><span>$</span>39.99</h1>
+            <p>Per month</p>
+          </div>
+          <div class="package">
+            <ul >
+              <li>Unimited Pizza</li>
+              <li>Daft punk Every Evenings</li>
+              <li>Full Access Pizza</li>
+              <li>2 Free Farks Every Months</li>
+              <li>Unlimited Burger</li>
+            </ul>
+            <a href="#"><button class="price-btn">SING UP</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="price-content">
+          <div class="price-head">
+            <h2>Professional Plan</h2>
+            <p>For Super Professional</p>
+          </div>
+          <div class="price-package">
+            <h1><span>$</span>49.99</h1>
+            <p>Per month</p>
+          </div>
+          <div class="package">
+            <ul >
+              <li>Unimited Pizza</li>
+              <li>Daft punk Every Evenings</li>
+              <li>Full Access Pizza</li>
+              <li>2 Free Farks Every Months</li>
+              <li>Unlimited Burger</li>
+            </ul>
+            <a href="#"><button class="price-btn">SING UP</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <p>Millions of people of all ages and from around
+          the world are improving their lives with us</p>
+      </div>
+      <div class="col-md-8 footer-control">
+        <div class="row ">
+          <div class="col-md-4">
+            <ul>
+              <li><b class="bold">Course</b></li>
+              <li>Graphic Design</li>
+              <li>Web Design</li>
+              <li>Business</li>
+              <li>Marketing</li>
+              <li>Engineering</li>
+
+            </ul>
+
+          </div>
+          <div class="col-md-4">
+            <ul>
+              <li><b class="bold">Terms</b></li>
+              <li>Graphic Design</li>
+              <li>Web Design</li>
+              <li>Business</li>
+              <li>Marketing</li>
+              <li>Engineering</li>
+            </ul>
+
+          </div>
+          <div class="col-md-4">
+            <ul>
+              <li><b class="bold">Useful Link</b></li>
+              <li>Graphic Design</li>
+              <li>Web Design</li>
+              <li>Business</li>
+              <li>Marketing</li>
+              <li>Engineering</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row copyright">
+      <p>Copyright © 2022 eGrow Plants | Powered by eGrow Plants</p>
+    </div>
+  </div>
+</footer>
+
+
+{/* <div class="more">
   <h1>more sections are coming...</h1>
- </div>
+ </div> */}
 
 
         </div>

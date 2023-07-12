@@ -35,15 +35,15 @@ const LoginBootstrap = () => {
 
             <form onSubmit={handleSubmit}>
             <div class="mb-3">
-                <label for="formGroupExampleInput" className="form-label">Example label</label>
+                <label for="formGroupExampleInput" className="form-label">Enter Email</label>
                 <input type="email" name='email' className="form-control" id="formGroupExampleInput" placeholder="Your Email" required/>
             </div>
             <div className="mb-3">
-                <label for="formGroupExampleInput2" className="form-label">Another label</label>
+                <label for="formGroupExampleInput2" className="form-label">Enter Password</label>
                 <input type="password" name='password' className="form-control" id="formGroupExampleInput2" placeholder="Your Password" required />
                 
             </div> 
-            {success && <Navigate to="/nurses"></Navigate> }
+            {success && <Navigate to="/dashboard"></Navigate> }
             {!success && <p className='text-danger'>Password is wrong</p> }
             <button className='btn btn-primary' type='submit'>Login</button>
             </form>

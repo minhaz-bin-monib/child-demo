@@ -9,6 +9,8 @@ import OtherSections from "./components/LoginBootstrap";
 import MainSections from "./components/MainSections";
 import AddNurse from "./components/AddNurse";
 import AllNurses from "./components/AllNurses";
+import Dashboard from "./components/Dashboard";
+import NurseDetails from "./components/NurseDetails";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
         path : '/nurses',
         element : <AllNurses></AllNurses>,
         loader: () => fetch('http://localhost:5000/users')
+      },
+      {
+        path : '/dashboard',
+        element : <Dashboard></Dashboard>
+      },
+      {
+        path : '/showNurses',
+        element : <NurseDetails></NurseDetails>
       }
     ]
   }

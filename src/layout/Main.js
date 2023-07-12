@@ -25,12 +25,12 @@ const Main = () => {
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#nurse"><Link to='/nurses'>Nurses</Link></a>
+                                    <a className="nav-link" href="#nurse"><Link className='main-text-style' to='/nurses'>Nurses</Link></a>
                                 </li>
                             </ul>
                             <form className="d-flex">
-                                <Link to='/login'>Login</Link>/
-                                <Link to='/register'>Register</Link>
+                                
+                                <button className='btn btn-danger'><Link style={{color:"white"}} className='main-text-style' to='/register'>Sign Up</Link></button>
                             </form>
                         </div>
                     </div>
