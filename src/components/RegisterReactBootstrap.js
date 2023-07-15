@@ -1,9 +1,10 @@
 import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 import app from '../firebase/firebase.init'
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../contexts/UserContext';
 
 
 const auth = getAuth(app)
@@ -14,7 +15,7 @@ const RegisterReactBootstrap = () => {
     const [passwordError, setPasswordError] = useState('');
 
     const[success,setSuccess] = useState(false);
-
+    const {createUser} = useContext(AuthContext);
 
 
     const handleRegister=(event) =>{
@@ -42,7 +43,7 @@ const RegisterReactBootstrap = () => {
         }
         setPasswordError('');
 
-        createUserWithEmailAndPassword(auth, email, password)
+        createUser( email, password)
         .then(result => {
             const user = result.user;
             console.log(user);

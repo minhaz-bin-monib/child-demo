@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import app from '../firebase/firebase.init';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { AuthContext } from '../contexts/UserContext';
+
+export const EmailContext = createContext();
 
 const auth = getAuth(app);
 
-const LoginBootstrap = () => {
+const LoginBootstrap = ({children}) => {
 
     const [success, setSuccess] =useState(false)
-
+    const {signIn} = useContext(AuthContext);
+    
     const handleSubmit = (event) =>{
         event.preventDefault();
         setSuccess(false);
@@ -17,9 +21,10 @@ const LoginBootstrap = () => {
         const password = form.password.value;
 
 
-        signInWithEmailAndPassword(auth, email, password).then(result => {
+        signIn(email, password).then(result => {
             const user = result.user;
             console.log(user);
+           
             setSuccess(true);
         })
         .catch(error =>{
@@ -30,7 +35,10 @@ const LoginBootstrap = () => {
     }
 
     return (
+
+        
         <div className='w-50 mx-auto'>
+            
             <h3 className='text-primary'>Please Login!!</h3>
 
             <form onSubmit={handleSubmit}>
@@ -48,7 +56,7 @@ const LoginBootstrap = () => {
             <button className='btn btn-primary' type='submit'>Login</button>
             </form>
 
-
+        
 
             <p><small>New to this website? Please <Link to='/register'>Register</Link></small></p>
         </div>

@@ -37,17 +37,17 @@ const AddNurse = () => {
 
 
     return (
-        <div className='text-center'>
-            <h2>Please add nurse here:</h2>
+        <div className='text-center w-50' style={{paddingLeft:'500px', paddingTop:'50px'}}>
+            <h2 style={{color:'red'}}>Add nurse:</h2>
 
             <form onSubmit={handleAddUser}>
-                <input onBlur={handleInputBlur} type="text" name='name' placeholder='name' required />
+                <input className="form-control" onBlur={handleInputBlur} type="text" name='name' placeholder='name' required />
                 <br />
-                <input onBlur={handleInputBlur} type="text" name='address' placeholder='address' required />
+                <input className="form-control" onBlur={handleInputBlur} type="text" name='address' placeholder='address' required />
                 <br />
-                <input onBlur={handleInputBlur}  type="email" name='email' id="" placeholder='email' required />
+                <input className="form-control" onBlur={handleInputBlur}  type="email" name='email' id="" placeholder='email' required />
                 <br />
-                <button  type="submit">Add User</button>
+                <button className='btn btn-danger'  type="submit">Add User</button>
             </form>
         </div>
     );

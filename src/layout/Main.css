@@ -296,3 +296,22 @@ font-weight: 700;
     font-weight: 500;
     text-transform: uppercase;
     }
+
+    .admin_style{
+        border: 2px solid #e71e58;
+        background-color: #fff;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        font-size: 9px;
+        margin-bottom: 0;
+        font-weight: 700;
+        padding-top: 11px;
+        padding-left: 2px;
+        margin-left: 5px;
+        color: #f70751;
+        text-transform: uppercase;
+    }
+    .font-style{
+
+    }

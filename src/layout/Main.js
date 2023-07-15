@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import './Main.css';
 import logo from './images/logo_prev_ui.png';
+import UserContext, { AuthContext } from '../contexts/UserContext';
+import { EmailContext } from '../components/LoginBootstrap';
 
 
 const Main = () => {
+
+    const {user, logOut} = useContext(AuthContext)
     return (
         <div>
 
@@ -22,6 +26,7 @@ const Main = () => {
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="#services">SERVICES</a>
+                                    
                                 </li>
 
                                 <li className="nav-item">
@@ -30,8 +35,25 @@ const Main = () => {
                             </ul>
                             <form className="d-flex">
                                 
-                                <button className='btn btn-danger'><Link style={{color:"white"}} className='main-text-style' to='/register'>Sign Up</Link></button>
+
+                            {user?.uid ?
+                        
+                        <>
+                        <button onClick={logOut} className='btn btn-danger'><Link style={{color:"white"}} className='main-text-style' to='/main'>Logout</Link></button> 
+                        <div>
+                        <p className='admin_style'><span className='font-style'>Admin</span></p>
+                        </div>
+                        </>
+                            
+
+                            :
+                            <button className='btn btn-danger'><Link style={{color:"white"}} className='main-text-style' to='/login'>Login</Link></button>
+                            
+                            }
+ 
+                                
                             </form>
+
                         </div>
                     </div>
                 </nav>
