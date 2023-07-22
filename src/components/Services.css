@@ -1,0 +1,107 @@
+.Services-section{
+
+    padding-top:50px;
+    
+    padding-bottom: 50px;
+    }
+    
+    .Services-section .heading{
+    
+    }
+    
+    .Services-section .heading h1{
+    
+    text-align: center;
+    
+    padding-bottom: 20px;
+    color: #e51e58;
+    }
+    
+    .single-course{
+    
+        background: #FFFFFF;
+        
+        box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+        
+        border-radius: 18px;
+        
+        padding: 15px;
+        }
+        
+        .single-course img{
+            
+        }
+        
+        .single-course h1{
+            
+        font-weight: 500;
+            
+        font-size: 24px;
+            
+        line-height: 36px;
+        /* identical to box height */
+            
+        margin: 5px 0 10px 0;
+            
+        color: #413960;
+        }
+        
+        .single-course p{
+            
+        font-weight: 400;
+            
+        font-size: 16px;
+            
+        line-height: 24px;
+        /* identical to box height */
+            
+        color: #585859;
+            
+        margin: 5px 0;
+        }
+        
+        .btn-course{
+        
+    background: #e61f58;
+        
+    border-radius: 33px;
+        
+    padding: 0;
+        
+    padding: 3px 35px;
+        
+    color: #fff;
+        
+    font-size: 15px;
+        
+    margin: 10px 0;
+        }
+        
+        .single-course ul{
+        
+    list-style: none;
+        
+    display: flex;
+        
+    justify-content: space-between;
+        
+    margin-top: 10px;
+        
+    align-items: center;
+        
+    padding-left: 0;
+        }
+        
+        .single-course ul li{
+            
+        display: flex;
+            
+        align-items: center;
+            
+        /* justify-content: left; */
+        }
+        
+        .single-course ul li i{
+            
+        padding-right: 5px;
+        }

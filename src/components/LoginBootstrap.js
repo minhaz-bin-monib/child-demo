@@ -28,7 +28,9 @@ const LoginBootstrap = ({children}) => {
             setSuccess(true);
         })
         .catch(error =>{
-            console.log('error',error)
+            console.log('error',error);
+            alert('Your Password is Wrong');
+            return <p>Your Password in Wrong</p>
         })
 
 
@@ -52,7 +54,8 @@ const LoginBootstrap = ({children}) => {
                 
             </div> 
             {success && <Navigate to="/dashboard"></Navigate> }
-            {!success && <p className='text-danger'>Password is wrong</p> }
+            {/* {!success && <p className='text-danger'>Password is wrong</p> } */}
+            
             <button className='btn btn-primary' type='submit'>Login</button>
             </form>
 

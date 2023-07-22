@@ -10,12 +10,14 @@ import seatPic from "../layout/images/Layer 2.png"
 import nurse1 from '../layout/images/nurse1.jpg'
 import nurse2 from '../layout/images/nurse-2.jpg'
 import nurse3 from '../layout/images/nurse-3.jpg'
+import Particle from '../components/Particle';
 
 const MainSections = () => {
     return (
         <div>
 
             <section class="banner-section">
+            <Particle></Particle>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-5">
@@ -212,6 +214,51 @@ const MainSections = () => {
     </div>
   </div>
 </section>
+
+
+<div class="contact_form_container">
+  <div class="card">
+    <div class="left">
+      <img src="https://www.cadence-education.com/wp-content/uploads/2020/08/NAU_51110-1030x580.jpg"/>
+    </div>
+    <div class="right">
+      <h2>Contact Us</h2>
+      <div class="contact">
+        <div class="form-container">
+          <form class="form">
+            <div class="username">
+              <input type="text" placeholder="Enter your Name"/>
+            </div>
+            <div class="useremail">
+              <input type="email" placeholder="Enter your email" required/>
+            </div>
+            <div class="usermessage">
+              <textarea placeholder="Enter your message" required></textarea>
+            </div>
+            <div class="usersubmit">
+              <input type="submit" value="Contact Us"/>
+            </div>
+          </form>
+        </div>
+        <div class="address">
+          <div class="email">
+            <h4>Contact</h4>
+            <p>hi@example.com</p>
+          </div>
+          <div class="location">
+            <h4>Based in</h4>
+            <p>Los Angeles,<br/>California</p>
+          </div>
+          <div class="social">
+            <span><a href="#"><i class="fab fa-facebook"></i></a></span>
+            <span><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></span>
+            <span><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

@@ -54,7 +54,7 @@ const AllNurses = () => {
                                     <button className='btn btn-danger' onClick={() => handleDelete(user)}>Delete</button> */}
 
                                     <Card style={{ width: '18rem' }}>
-                                        <Card.Img variant="top" src="https://static.vecteezy.com/system/resources/previews/005/520/435/original/cartoon-drawing-of-a-babysitter-vector.jpg" />
+                                        <Card.Img variant="top" src="https://raisingchildren.net.au/__data/assets/image/0026/56780/babysitters-narrow.jpg" />
                                         <Card.Body className='text-center'>
                                             <Card.Title>Nurse Name:  {user.name}</Card.Title>
                                             <Card.Text>

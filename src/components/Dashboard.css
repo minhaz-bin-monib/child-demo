@@ -21,3 +21,16 @@
 .main_row_second{
     
 }
+
+.dashboard_style{
+    background-color: #fff8fa;
+    width: 30%;
+    height: 600px;
+    
+}
+
+.heading_style{
+    margin-left: 5px;
+    padding-top: 40px;
+    color: #e71f58;
+}

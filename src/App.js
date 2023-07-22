@@ -11,6 +11,10 @@ import AddNurse from "./components/AddNurse";
 import AllNurses from "./components/AllNurses";
 import Dashboard from "./components/Dashboard";
 import NurseDetails from "./components/NurseDetails";
+import ShowallNurses from "./components/ShowallNurses";
+import Services from "./components/Services";
+import GuardianLogin from "./components/GuardianLogin";
+import Payment from "./components/Payment";
 
 const router = createBrowserRouter([
   {
@@ -43,13 +47,32 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/users')
       },
       {
+        path : '/allnurses',
+        element : <ShowallNurses></ShowallNurses>,
+        loader: () => fetch('http://localhost:5000/users')
+      },
+      {
         path : '/dashboard',
         element : <Dashboard></Dashboard>
       },
       {
         path : '/showNurses',
         element : <NurseDetails></NurseDetails>
+      },
+      {
+        path : '/services',
+        element : <Services></Services>
+      },
+      {
+        path : '/glogin',
+        element : <GuardianLogin></GuardianLogin>
+      },
+      {
+        path : '/payment',
+        element : <Payment></Payment>
       }
+
+
     ]
   }
 ])
