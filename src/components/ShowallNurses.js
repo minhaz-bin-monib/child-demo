@@ -28,14 +28,14 @@ const ShowallNurses = () => {
                                     <button className='btn btn-danger' onClick={() => handleDelete(user)}>Delete</button> */}
 
                                     <Card style={{ width: '18rem' }}>
-                                        <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSTqeQelLj46w8fFnctocUJK6U5zRUufN_qu_lXgiXaQ&s" alt='' />
+                                        <Card.Img variant="top" src={user.imageURL} alt='' />
                                         <Card.Body className='text-center'>
                                             <Card.Title>Nurse Name:  {user.name}</Card.Title>
                                             <Card.Text>
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                                 <p><b>Nurse Email: {user.email}</b></p>
                                             </Card.Text>
-                                            <Button className='btn btn-primary' >Delete</Button>
+                                            
                                         </Card.Body>
                                     </Card>
 
@@ -67,14 +67,14 @@ const ShowallNurses = () => {
                                     <button className='btn btn-danger' onClick={() => handleDelete(user)}>Delete</button> */}
 
                                     <Card style={{ width: '18rem' }}>
-                                        <Card.Img variant="top" src="https://media.istockphoto.com/id/1212170328/photo/first-steps.jpg?s=612x612&w=0&k=20&c=6A4eQ79CX-MHXTq3aCuiGTwohgKZ7QtahtZsXuLuq9U=" alt='' />
+                                        <Card.Img variant="top" src={user.imageURL} alt='' />
                                         <Card.Body className='text-center'>
                                             <Card.Title>Nurse Name:  {user.name}</Card.Title>
                                             <Card.Text>
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                                 <p><b>Nurse Email: {user.email}</b></p>
                                             </Card.Text>
-                                            <Button className='btn btn-primary' >Delete</Button>
+                                            
                                         </Card.Body>
                                     </Card>
 

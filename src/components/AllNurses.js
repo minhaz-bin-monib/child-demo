@@ -54,11 +54,11 @@ const AllNurses = () => {
                                     <button className='btn btn-danger' onClick={() => handleDelete(user)}>Delete</button> */}
 
                                     <Card style={{ width: '18rem' }}>
-                                        <Card.Img variant="top" src="https://raisingchildren.net.au/__data/assets/image/0026/56780/babysitters-narrow.jpg" />
+                                        <Card.Img variant="top" src={user.imageURL} />
                                         <Card.Body className='text-center'>
                                             <Card.Title>Nurse Name:  {user.name}</Card.Title>
                                             <Card.Text>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                                She is a top class nurse from our Day Care. 
                                                 <p><b>Nurse Email: {user.email}</b></p>
                                             </Card.Text>
                                             <Button variant="danger" onClick={() => handleDelete(user)}>Delete</Button>
