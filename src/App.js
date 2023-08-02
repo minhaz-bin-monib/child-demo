@@ -15,6 +15,9 @@ import ShowallNurses from "./components/ShowallNurses";
 import Services from "./components/Services";
 import GuardianLogin from "./components/GuardianLogin";
 import Payment from "./components/Payment";
+import Preplay from "./components/Preplay";
+import Play from "./components/Play";
+import Nursery from "./components/Nursery";
 
 const router = createBrowserRouter([
   {
@@ -70,7 +73,20 @@ const router = createBrowserRouter([
       {
         path : '/payment',
         element : <Payment></Payment>
+      },
+      {
+        path : '/preplay',
+        element : <Preplay></Preplay>
+      },
+      {
+        path : '/play',
+        element : <Play></Play>
+      },
+      {
+        path : '/nursery',
+        element : <Nursery></Nursery>
       }
+      
 
 
     ]

@@ -4,6 +4,7 @@ import './Main.css';
 import logo from './images/logo_prev_ui.png';
 import UserContext, { AuthContext } from '../contexts/UserContext';
 import { EmailContext } from '../components/LoginBootstrap';
+import { Dropdown } from 'react-bootstrap';
 
 
 
@@ -32,9 +33,26 @@ const Main = () => {
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#nurse"><Link className='main-text-style' to='/allnurses'>Nurses</Link></a>
+                                    <a className="nav-link" ><Link className='main-text-style' to='/allnurses'>Nurses</Link></a>
                                 </li>
+                                <Dropdown>
+      <Dropdown.Toggle  id="dropdown-basic" style={{background:'#ffebf1', color: '#46425e',
+    border: 'none',
+    fontWeight: '700'}}>
+        Program
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Item href="http://localhost:3000/preplay">Pre-Play</Dropdown.Item>
+        <Dropdown.Item href="http://localhost:3000/play">Play</Dropdown.Item>
+        <Dropdown.Item href="http://localhost:3000/nursery">Nursery</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+
+                                
+
                             </ul>
+                            
                             <form className="d-flex">
                                 
 

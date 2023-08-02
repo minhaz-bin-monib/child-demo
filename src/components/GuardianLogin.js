@@ -21,7 +21,7 @@ const GuardianLogin = () => {
 
 
                 <Button variant="primary" type="submit">
-                <Link to='/payment'>  <span style={{color:'white'}}>Login </span> </Link>
+                 <a style={{listStyle:'none', color:'white'}} href="https://minhazz.com/childcare/checkout/">Login</a>
                 </Button>
             </Form>
 
