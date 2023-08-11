@@ -6,12 +6,8 @@ import { Button, Card } from 'react-bootstrap';
 
 const AllNurses = () => {
 
-
-
     const users = useLoaderData();
     const [displayUsers, setDisplayUsers] = useState(users);
-
-
 
     const handleDelete = user => {
 

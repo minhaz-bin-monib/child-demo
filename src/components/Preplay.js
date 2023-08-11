@@ -25,7 +25,7 @@ const Preplay = () => {
                 </div>
                 
             </div>
-            <button className='btn btn-danger'><a style={{listStyle:'none', color:'white'}} href="https://minhazz.com/childcare/checkout/">Go For Payment</a></button>
+            <button className='btn btn-danger'><a style={{listStyle:'none', color:'white'}} href="http://localhost:3000/payment">Go For Payment</a></button>
         </div>
     );
 };

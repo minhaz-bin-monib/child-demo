@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import Dashboard from "./Dashboard";
 
 const AddNurse = () => {
 
@@ -67,7 +68,9 @@ const AddNurse = () => {
 
 
     return (
-        <div className='text-center w-50' style={{paddingLeft:'500px', paddingTop:'50px'}}>
+        <div>
+            <Dashboard></Dashboard>
+            <div className='text-center w-50' style={{paddingLeft:'500px', paddingTop:'50px'}}>
             <h2 style={{color:'red'}}>Add nurse:</h2>
 
             <form onSubmit={handleAddUser}>
@@ -82,6 +85,7 @@ const AddNurse = () => {
                 <br/>
                 <button className='btn btn-danger mt-3'  type="submit">Add User</button>
             </form>
+        </div>
         </div>
     );
 };
