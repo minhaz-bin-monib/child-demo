@@ -24,7 +24,7 @@ const Particle = () => {
             loaded={particlesLoaded}
             options={{
                 background: {
-                    color: "#fff"
+                    color: ""
                   },
                   particles: {
                     color: { value: "#ffebf1" },
@@ -42,7 +42,7 @@ const Particle = () => {
                       value: 400
                     },
                     opacity: {
-                      value: 0.7
+                      value: 0.9
                     },
                     shape: {
                       type: "circle"
@@ -56,7 +56,7 @@ const Particle = () => {
                       speed: 10
                     },
                     zIndex: {
-                      value: { min: 0, max: 1 }
+                      value: { min: -1, max: 1 }
                     }
                   }
             }}

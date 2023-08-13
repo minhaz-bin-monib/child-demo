@@ -1,0 +1,85 @@
+import React from 'react';
+import './MainSections.css'
+import bannerImg from './HmImage/banner.jpg'
+
+import Particle from '../Particle';
+import Navbar from '../../layout/Navbar/Navbar';
+import ContactUs from '../ContactUs/ContactUs';
+import Footer from '../../layout/Footer/Footer';
+import nurses from "./HmImage/nurses.png"
+import { Link } from 'react-router-dom';
+
+const MainSections = () => {
+  return (
+    <div>
+      <Navbar></Navbar>
+      <section class="banner-section">
+        <Particle></Particle>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="banner-left">
+                <h2>We Care <br /> Your Babies</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus beatae corporis odio provident, obcaecati voluptate. adipisicing elit. Accusamus beatae corporis odio provident, obcaecati voluptate. </p>
+                <div class="btn btn-danger">Get this Plan</div>
+              </div>
+            </div>
+
+            <div class="col-md-7">
+              <div class="banner-right">
+                <img src={bannerImg} class="img-fluid" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <section class="Services-section" id="services">
+        <div class="container">
+          
+          <div className="row">
+          <h1>Our Services</h1>
+          <div className='col-md-6'>
+            <p>We give supervision and care of infants and young children during the daytime, particularly so that their parents can hold jobs. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolores totam ab eius! Laborum.</p>
+            <Link to='/services'><div class="btn btn-danger">See More</div></Link>
+          </div>
+
+          <div className='col-md-6'>
+            <img src={nurses} alt="" />
+          </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+      
+
+
+      <ContactUs></ContactUs>
+      <Footer></Footer>
+
+
+
+
+
+      {/* <div class="more">
+  <h1>more sections are coming...</h1>
+ </div> */}
+
+
+    </div>
+  );
+};
+
+export default MainSections;

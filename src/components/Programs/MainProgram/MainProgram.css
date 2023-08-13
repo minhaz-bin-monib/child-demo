@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.program_main_section{
+    width: 99%;
+}
+
+.program_main_section h1{
+    text-align: center;
+    background-color: #e71f58;
+    color: white;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    width: 40%;
+    margin-left: 400px;
+    
+
+}
+
+
+.infant_section{
+ text-align: center;
+ margin-bottom: 20px;
+}
+
+.infant_section img{
+    border-radius: 150px;
+}
+
+.infant_section h2{
+    color: #e71f58;
+    
+}
+
+.infant_section h3{
+    color: #e71f58;
+}
+
+.infant_section button{
+    
+}
+.infant_section button a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.toddler_section{
+    text-align: center;
+}
+
+.toddler_section img{
+    border-radius: 150px;
+}
+
+.toddler_section h2{
+    color: #e71f58;
+}
+
+.toddler_section h3{
+    color: #e71f58;
+}
+
+.toddler_section button{
+    
+}
+
+.toddler_section button a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.preschool_section{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.preschool_section img{
+    border-radius: 150px;
+}
+
+.preschool_section h2{
+    color: #e71f58;
+}
+
+.preschool_section h3{
+    color: #e71f58;
+}
+
+.preschool_section button{
+    
+}
+.preschool_section button a{
+    text-decoration: none;
+    color: white;
+}
+

@@ -1,0 +1,67 @@
+
+footer{
+    
+    padding-top: 50px;
+        
+    padding-bottom: 20px;
+        
+    background: #ffebf1;
+        
+    color: #e7193d;
+    }
+    
+    .footer-control{
+        
+        /* display: flex; */
+            
+        /* align-items: center; */
+            
+        padding-left: 100px;
+        }
+        
+        .img-2{
+        
+        margin-bottom: 15px;
+        }
+        
+        .mrgn{
+            
+        margin-top: 1px;
+        }
+    
+        .package a .price-btn:hover {
+            background-color:#e7193d;
+        }
+    
+    
+        .agency{
+    
+        }
+    
+    
+        .agency h1{
+    
+    font-size: 36px;
+    
+    }
+        .agency h2{
+    
+    font-size: 21px;
+    
+    }
+        .agency p{
+    
+    font-size: 15px;
+    
+    }
+    
+    
+        .agency .lit-pic{
+    
+    height: 35px;
+    
+    }
+    
+    .mr{
+        
+    }

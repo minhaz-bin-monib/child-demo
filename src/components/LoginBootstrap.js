@@ -3,6 +3,7 @@ import { Link, Navigate } from 'react-router-dom';
 import app from '../firebase/firebase.init';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { AuthContext } from '../contexts/UserContext';
+import Navbar from '../layout/Navbar/Navbar';
 
 export const EmailContext = createContext();
 
@@ -39,7 +40,9 @@ const LoginBootstrap = ({children}) => {
     return (
 
         
-        <div className='w-50 mx-auto'>
+        <div>
+            <Navbar></Navbar>
+            <div className='w-50 mx-auto'>
             
             <h3 className='text-primary'>Please Login!!</h3>
 
@@ -53,7 +56,7 @@ const LoginBootstrap = ({children}) => {
                 <input type="password" name='password' className="form-control" id="formGroupExampleInput2" placeholder="Your Password" required />
                 
             </div> 
-            {success && <Navigate to="/dashboard"></Navigate> }
+            {success && <Navigate to="/main"></Navigate> }
             {/* {!success && <p className='text-danger'>Password is wrong</p> } */}
             
             <button className='btn btn-primary' type='submit'>Login</button>
@@ -62,6 +65,7 @@ const LoginBootstrap = ({children}) => {
         
 
             <p><small>New to this website? Please <Link to='/register'>Register</Link></small></p>
+        </div>
         </div>
     );
 };

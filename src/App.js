@@ -3,21 +3,26 @@ import './App.css';
 import app from './firebase/firebase.init'
 import RegisterReactBootstrap from "./components/RegisterReactBootstrap";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Main from "./layout/Main";
+import Main from "./layout/CoreMain/Main";
 import LoginBootstrap from "./components/LoginBootstrap";
 import OtherSections from "./components/LoginBootstrap";
-import MainSections from "./components/MainSections";
-import AddNurse from "./components/AddNurse";
-import AllNurses from "./components/AllNurses";
+import MainSections from "./components/HomePage/MainSections";
+import AddNurse from "./components/Dashboard/AddNurse/AddNurse";
 import Dashboard from "./components/Dashboard";
 import NurseDetails from "./components/NurseDetails";
-import ShowallNurses from "./components/ShowallNurses";
-import Services from "./components/Services";
-import GuardianLogin from "./components/GuardianLogin";
+import ShowallNurses from "./components/Babysitters/ShowallNurses";
 import Payment from "./components/Payment";
-import Preplay from "./components/Preplay";
-import Play from "./components/Play";
-import Nursery from "./components/Nursery";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import MainProgram from "./components/Programs/MainProgram/MainProgram";
+import Toddler from "./components/Programs/Toddler/Toddler";
+import Infant from "./components/Programs/Infant/Infant";
+import Preschool from "./components/Programs/PreSchool/Preschool";
+import Services from "./components/Services/Services";
+import Maindashboard from "./components/Dashboard/MainDashboard/Maindashboard";
+import DeleteNurse from "./components/Dashboard/DeleteNurse/DeleteNurse";
+import UpdateSingleNurse from "./components/Dashboard/UpdateNurse/UpdateSingleNurse/UpdateSingleNurse";
+import UpdateAllNurse from "./components/Dashboard/UpdateNurse/UpdateAllNurse/UpdateAllNurse";
+
 
 const router = createBrowserRouter([
   {
@@ -37,6 +42,10 @@ const router = createBrowserRouter([
         element : <RegisterReactBootstrap></RegisterReactBootstrap>
       },
       {
+        path : '/services',
+        element : <Services></Services>
+      },
+      {
         path : '/login',
         element : <LoginBootstrap></LoginBootstrap>
       },
@@ -45,8 +54,8 @@ const router = createBrowserRouter([
         element : <AddNurse></AddNurse>
       },
       {
-        path : '/nurses',
-        element : <AllNurses></AllNurses>,
+        path : '/deleteNurse',
+        element : <DeleteNurse></DeleteNurse>,
         loader: () => fetch('http://localhost:5000/users')
       },
       {
@@ -55,36 +64,42 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/users')
       },
       {
+        path : '/updateAllNurses',
+        element : <UpdateAllNurse></UpdateAllNurse>,
+        loader: () => fetch('http://localhost:5000/users')
+      },
+      {
         path : '/dashboard',
-        element : <Dashboard></Dashboard>
+        element : <PrivateRoute><Maindashboard></Maindashboard></PrivateRoute>
       },
       {
         path : '/showNurses',
         element : <NurseDetails></NurseDetails>
       },
       {
-        path : '/services',
-        element : <Services></Services>
-      },
-      {
-        path : '/glogin',
-        element : <GuardianLogin></GuardianLogin>
-      },
-      {
         path : '/payment',
         element : <Payment></Payment>
       },
       {
-        path : '/preplay',
-        element : <Preplay></Preplay>
+        path : '/programs',
+        element : <MainProgram></MainProgram>
       },
       {
-        path : '/play',
-        element : <Play></Play>
+        path : '/toddler',
+        element : <Toddler></Toddler>
       },
       {
-        path : '/nursery',
-        element : <Nursery></Nursery>
+        path : '/infant',
+        element : <Infant></Infant>
+      },
+      {
+        path : '/preschool',
+        element : <Preschool></Preschool>
+      },
+      {
+        path : '/updateSingleNurse/:id',
+        element : <UpdateSingleNurse></UpdateSingleNurse>,
+        loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`)
       }
       
 

@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main_section{
+    /* width: 75%; */
+    padding: 2;
+}
+
+.main_div{
+    
+}
+
+.main_div h2{
+    text-align: center;
+    background-color: #e71f58;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.apply_now_button{
+    text-align: center;
+   margin-top: 20px;
+   margin-bottom: 50px;
+
+}
