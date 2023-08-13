@@ -110,94 +110,20 @@ padding-bottom: 50px;
 
 
 
+.facilities_seciton_main_div{
 
-
-    
-
-    
-.our-price{
-    background: #f9f9f9;
-    padding: 100px 0;
-}
-.price-content{
-    text-align:  center;
-    border: 5px solid #fff;
-    box-shadow: 0px 0px 5px  #b9b9b96e;
-    /* padding: 25px; */
-    padding:  25px 0px;
-    transition: all 0.3s;
--webkit-transition: all 0.3s;
--moz-transition: all 0.3s;
-}
-.price-content:hover{
-    border: 5px solid #ffebf1;
-}
-.price-head{
-    margin:  0 auto;
-    text-align:  center;
-}
-.price-head h2{
-    margin-bottom:  0px;
-    font-size: 30px;
-    color: #00cce1;
-}
-.price-head p{
-    font-size: 16px;
-    color: #707070;
-}
-.price-content .price-package{
-    background:  #fff;
-    /* padding: 0px; */
-}
-.price-package{
-    color: #00cce1;
-    padding: 20px 16px;
-    background:  #fff;
-    margin: 15px 0px;
-        transition: all 0.3s;
--webkit-transition: all 0.3s;
--moz-transition: all 0.3s;
-}
-.price-content:hover .price-package {
-    background: #ffebf1;
-    color: #e7193d;
 }
 
-.price-package h1{
-    margin-bottom:  0px;
-    font-size: 45px;
-    letter-spacing: 0px;
+.facilities_seciton_main_div h1{
+    text-align: center;
+    padding-bottom: 20px;
+    color: #e52159;
+    font-weight: 700;
 }
-.price-package h1 span{
-    font-size:  24px;
-  
+
+.facilities_seciton_main_div img{
+
 }
-.price-package span{}
-.price-package p{
-    margin-bottom: 0px;
-    font-weight:  bold;
-}
-.package{}
-.package ul{
-    padding-bottom: 10px;
-    padding-left:  0;
-}
-.package ul li{
-    list-style: none;
-    padding: 5px;
-    color: #707070;
-}
-.package a{}
-.package a button{}
-.price-btn{
-    border:  none;
-    padding: 10px 37px;
-    background: #00cce1;
-    color:  #fff;
-    font-weight:  bold;
-    font-size: 20px;
-}
-.package a .price-btn{}
 
 
 

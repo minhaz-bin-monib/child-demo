@@ -8,6 +8,7 @@ import ContactUs from '../ContactUs/ContactUs';
 import Footer from '../../layout/Footer/Footer';
 import nurses from "./HmImage/nurses.png"
 import { Link } from 'react-router-dom';
+import facalitiPic from './HmImage/Childcare-Renovation-Infographic-1-980x1470.png (1).jpg'
 
 const MainSections = () => {
   return (
@@ -58,7 +59,14 @@ const MainSections = () => {
 
 
 
-
+    <section className="facilities_seciton">
+    <div className="facilities_seciton_main_div container">
+    <div className="row">
+    <h1>Our facilities</h1>
+    <img src={facalitiPic} alt="" />
+    </div>
+    </div>
+    </section>
 
 
 
