@@ -17,6 +17,9 @@ const AddNurse = () => {
             name: user.name,
             address: user.address,
             email: user.email,
+            designation: user.designation,
+            qualification: user.qualification,
+            experience: user.experience,
             imageURL: imageURL
         }
         console.log(eventData);
@@ -81,6 +84,13 @@ const AddNurse = () => {
                 <input className="form-control" onBlur={handleInputBlur} type="text" name='address' placeholder='address' required />
                 <br />
                 <input className="form-control" onBlur={handleInputBlur}  type="email" name='email' id="" placeholder='email' required />
+                <br />
+                <input className="form-control" onBlur={handleInputBlur}  type="text" name='designation' id="" placeholder='designation' required />
+                <br />
+                <input className="form-control" onBlur={handleInputBlur}  type="text" name='qualification' id="" placeholder='qualification' required />
+                <br />
+                
+                <input className="form-control" onBlur={handleInputBlur}  type="text" name='experience' id="" placeholder='experience' required />
                 <br />
                 
                 <input  name="exampleRequired" type="file" onChange={handleImageUpload} />

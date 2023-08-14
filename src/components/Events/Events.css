@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.event_main_div{
+    
+}
+
+.event_main_div h1{
+
+    text-align: center;
+    background-color: #e71f58;
+    color: white;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    width: 40%;
+    margin-left: 400px;
+    
+}
+
+.daily_activitiees{
+
+}
+
+.daily_activitiees ul{
+    padding-left: 370px;
+}
+
+.daily_activitiees ul li{
+    background-color: #ffebf1;
+    margin-bottom: 30px;
+    list-style: none;
+    /* text-align: center; */
+    width: 67%;
+    color: #0e3858;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.daily_activitiees h2{
+    text-align: center;
+    padding-bottom: 20px;
+    padding-left: 90px;
+    color: #e71f58;
+
+}
+
+
+.monthly_events{
+
+}
+
+.monthly_events h2{
+    color: #e71f58;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.monthly_events h3{
+    color: #e71f58;
+}
+
+.monthly_events p{
+    
+}

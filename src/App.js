@@ -22,6 +22,7 @@ import UpdateSingleNurse from "./components/Dashboard/UpdateNurse/UpdateSingleNu
 import UpdateAllNurse from "./components/Dashboard/UpdateNurse/UpdateAllNurse/UpdateAllNurse";
 import Curriculum from "./components/Curriculum/Curriculum";
 import Admission from "./components/Admission/Admission";
+import Events from "./components/Events/Events";
 
 
 const router = createBrowserRouter([
@@ -104,6 +105,10 @@ const router = createBrowserRouter([
       {
         path : '/admission',
         element : <PrivateRoute><Admission></Admission></PrivateRoute>
+      },
+      {
+        path : '/events',
+        element : <PrivateRoute><Events></Events></PrivateRoute>
       }
       
 
