@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-import NurseDetails from '../NurseDetails';
+
 import { Button, Card } from 'react-bootstrap';
 import Navbar from '../../layout/Navbar/Navbar';
 import Footer from '../../layout/Footer/Footer';

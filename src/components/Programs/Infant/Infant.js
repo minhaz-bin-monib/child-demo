@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../../../layout/Navbar/Navbar';
 import Footer from '../../../layout/Footer/Footer';
 import './Infant.css'
+import { Link } from 'react-router-dom';
 
 const Infant = () => {
     return (
@@ -81,7 +82,7 @@ const Infant = () => {
 
 
 
-                        <p className='text-center'><button className='btn btn-danger  apply_now_button'>Apply Now</button></p>
+                        <Link to='/admission'><p className='text-center'><button className='btn btn-danger  apply_now_button'>Apply Now</button></p></Link>
 
 
 

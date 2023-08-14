@@ -26,15 +26,20 @@ const Navbar = () => {
                             <ul className="navbar-nav ms-auto me-auto mb-2 mb-lg-0" >
 
                                 <li className="nav-item">
-                                    <a className="nav-link " href="#home"><Link className='main-text-style' to='/main'>Home</Link></a>
+                                    <a className="nav-link " href="#"><Link className='main-text-style' to='/main'>Home</Link></a>
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link" href='#nurses' ><Link className='main-text-style' to='/allnurses'>Babysitters</Link></a>
+                                    <a className="nav-link" href='#' ><Link className='main-text-style' to='/allnurses'>Babysitters</Link></a>
                                 </li>
                                 
                                 <li className="nav-item">
-                                    <a className="nav-link" href='#program'><Link className='main-text-style' to='/programs'>Programs</Link></a>
+                                    <a className="nav-link" href='#'><Link className='main-text-style' to='/programs'>Programs</Link></a>
+
+                                </li>
+
+                                <li className="nav-item">
+                                    <a className="nav-link" href='#'><Link className='main-text-style' to='/curriculum'>Curriculum</Link></a>
 
                                 </li>
 

@@ -21,8 +21,8 @@ const MainSections = () => {
             <div class="col-md-5">
               <div class="banner-left">
                 <h2>We Care <br /> Your Babies</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus beatae corporis odio provident, obcaecati voluptate. adipisicing elit. Accusamus beatae corporis odio provident, obcaecati voluptate. </p>
-                <div class="btn btn-danger">Get this Plan</div>
+                <p>We give supervision and care of infants and young children during the daytime, particularly so that their parents can hold jobs. </p>
+                <Link to='/curriculum'><div class="btn btn-danger mt-3">Get this Plan</div></Link>
               </div>
             </div>
 

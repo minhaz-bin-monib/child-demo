@@ -8,8 +8,6 @@ import LoginBootstrap from "./components/LoginBootstrap";
 import OtherSections from "./components/LoginBootstrap";
 import MainSections from "./components/HomePage/MainSections";
 import AddNurse from "./components/Dashboard/AddNurse/AddNurse";
-import Dashboard from "./components/Dashboard";
-import NurseDetails from "./components/NurseDetails";
 import ShowallNurses from "./components/Babysitters/ShowallNurses";
 import Payment from "./components/Payment";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
@@ -22,6 +20,8 @@ import Maindashboard from "./components/Dashboard/MainDashboard/Maindashboard";
 import DeleteNurse from "./components/Dashboard/DeleteNurse/DeleteNurse";
 import UpdateSingleNurse from "./components/Dashboard/UpdateNurse/UpdateSingleNurse/UpdateSingleNurse";
 import UpdateAllNurse from "./components/Dashboard/UpdateNurse/UpdateAllNurse/UpdateAllNurse";
+import Curriculum from "./components/Curriculum/Curriculum";
+import Admission from "./components/Admission/Admission";
 
 
 const router = createBrowserRouter([
@@ -73,10 +73,6 @@ const router = createBrowserRouter([
         element : <PrivateRoute><Maindashboard></Maindashboard></PrivateRoute>
       },
       {
-        path : '/showNurses',
-        element : <NurseDetails></NurseDetails>
-      },
-      {
         path : '/payment',
         element : <Payment></Payment>
       },
@@ -100,6 +96,14 @@ const router = createBrowserRouter([
         path : '/updateSingleNurse/:id',
         element : <UpdateSingleNurse></UpdateSingleNurse>,
         loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`)
+      },
+      {
+        path : '/curriculum',
+        element : <PrivateRoute><Curriculum></Curriculum></PrivateRoute>
+      },
+      {
+        path : '/admission',
+        element : <PrivateRoute><Admission></Admission></PrivateRoute>
       }
       
 
