@@ -23,6 +23,7 @@ import UpdateAllNurse from "./components/Dashboard/UpdateNurse/UpdateAllNurse/Up
 import Curriculum from "./components/Curriculum/Curriculum";
 import Admission from "./components/Admission/Admission";
 import Events from "./components/Events/Events";
+import SingleStaff from "./components/Babysitters/SingleStaff/SingleStaff";
 
 
 const router = createBrowserRouter([
@@ -96,6 +97,11 @@ const router = createBrowserRouter([
       {
         path : '/updateSingleNurse/:id',
         element : <UpdateSingleNurse></UpdateSingleNurse>,
+        loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`)
+      },
+      {
+        path : '/singleStaff/:id',
+        element : <SingleStaff></SingleStaff>,
         loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`)
       },
       {

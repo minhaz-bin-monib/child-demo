@@ -8,6 +8,7 @@ import Footer from '../../layout/Footer/Footer';
 const ShowallNurses = () => {
 
     const users = useLoaderData();
+    const {_id, name, address, email, imageURL,designation} = users;
     const [displayUsers, setDisplayUsers] = useState(users);
 
 
@@ -15,7 +16,7 @@ const ShowallNurses = () => {
         <div >
             
             <Navbar></Navbar>
-            <h2 style={{color:'#ff347f'}} className='text-center mb-5 mt-5'>All Babysitters:</h2>
+            <h2 style={{color:'#ff347f'}} className='text-center mb-5 mt-5'>All Staffs:</h2>
 
 
             
@@ -32,12 +33,15 @@ const ShowallNurses = () => {
                                     <Card style={{ width: '18rem' }}>
                                         <Card.Img variant="top" src={user.imageURL} alt='' />
                                         <Card.Body className='text-center'>
-                                            <Card.Title>Nurse Name:  {user.name}</Card.Title>
+                                            <Card.Title>Stuff Name:  {user.name}</Card.Title>
                                             <Card.Text>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                                <p><b>Nurse Email: {user.email}</b></p>
+                                                <p><b>Designation: {user.designation}</b></p>
                                             </Card.Text>
                                             
+                                            <Link to={`/singleStaff/${user._id}`}>
+                                                <Button variant="success" >Details</Button> 
+                                                </Link>
+
                                         </Card.Body>
                                     </Card>
 

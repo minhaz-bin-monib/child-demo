@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.s_main_div{
+    text-align: center;
+}
+
+.s_main_div img{
+    width: 300px;
+    /* padding-left: 113px; */
+    margin-left: 413px;
+    
+}
