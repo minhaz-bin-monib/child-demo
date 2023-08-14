@@ -47,7 +47,47 @@ const Maindashboard = () => {
 
                                     </div>
                                     <div>
-                                    <Link to="/deleteNurse"><p>Delete Nurse</p></Link>
+                                    <Link to="/deleteNurse"><p>Curriculum</p></Link>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="list_icon">
+                                    <TiUserDeleteOutline size='1.5rem'></TiUserDeleteOutline>
+
+                                    </div>
+                                    <div>
+                                    <Link to="/deleteNurse"><p>Update Curriculum</p></Link>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="list_icon">
+                                    <TiUserDeleteOutline size='1.5rem'></TiUserDeleteOutline>
+
+                                    </div>
+                                    <div>
+                                    <Link to="/deleteNurse"><p>Delete Curriculum</p></Link>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="list_icon">
+                                    <TiUserDeleteOutline size='1.5rem'></TiUserDeleteOutline>
+
+                                    </div>
+                                    <div>
+                                    <Link to="/deleteNurse"><p>Activities</p></Link>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="list_icon">
+                                    <TiUserDeleteOutline size='1.5rem'></TiUserDeleteOutline>
+
+                                    </div>
+                                    <div>
+                                    <Link to="/deleteNurse"><p>Update Activities</p></Link>
                                     </div>
                                 </li>
 
