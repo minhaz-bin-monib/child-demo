@@ -13,7 +13,7 @@ const EnrollmentControll = () => {
 
     return (
         <div>
-        <Maindashboard></Maindashboard>
+        <Maindashboard></Maindashboard> <span style={{display:'block', height:'82px', width:'1090px', backgroundColor:'ghostwhite',marginLeft:'256px'}}></span>
         <div className="container rightMainD" style={{
             width: '1000px', marginRight: '1px',
             marginLeft: '280px', marginTop: '15px'
@@ -53,7 +53,7 @@ const EnrollmentControll = () => {
                                     <td>
                                         {/* Id Pass */}
                                         <Link className='btn btn-sm btn-primary' to={`/dashboard/editenrolment/${user._id}`}>Update Status</Link>
-
+                                   
                                     </td>
                                 </tr>
                         )
