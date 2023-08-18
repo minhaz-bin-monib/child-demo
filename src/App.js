@@ -38,6 +38,9 @@ import AcceptedEnrolment from "./components/Dashboard/EnrollmentControll/Accepte
 import HoldingEnrolment from "./components/Dashboard/EnrollmentControll/HoldingEnrolment";
 import RejectedEnrolment from "./components/Dashboard/EnrollmentControll/RejectedEnrolment";
 import Report from "./components/Dashboard/Report/Report";
+import ReadEnquiry from "./components/Dashboard/Enquiry/ReadEnquiry/ReadEnquiry";
+import UnreadEnquiry from "./components/Dashboard/Enquiry/UnreadEnquiry/UnreadEnquiry";
+import UnreadEnquiryDetails from "./components/Dashboard/Enquiry/UnreadEnquiry/UnreadEnquiryDetails";
 
 const router = createBrowserRouter([
   {
@@ -203,6 +206,21 @@ const router = createBrowserRouter([
       {
         path : '/enroll',
         element : <Enrollment></Enrollment>
+      },
+      {
+        path : '/dashboard/readEnquiry',
+        element : <ReadEnquiry></ReadEnquiry>,
+        loader: () => fetch('http://localhost:5000/enquiry')
+      },
+      {
+        path : '/dashboard/unreadEnquiry',
+        element : <UnreadEnquiry></UnreadEnquiry>,
+        loader: () => fetch('http://localhost:5000/enquiry')
+      },
+      {
+        path : '/dashboard/unreadEnquiryDetails/:id',
+        element : <UnreadEnquiryDetails></UnreadEnquiryDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/unreadEnquiry/${params.id}`)
       }
 
 

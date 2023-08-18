@@ -9,15 +9,29 @@ import { TiUserDeleteOutline } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import { Collapse } from "bootstrap";
 import { IoIosArrowDown } from "react-icons/io";
+import { BiGroup } from "react-icons/bi";
 
 const Maindashboard = () => {
+
   var [toggle, setToggle] = useState(false);
+  var [toggle2, setToggle2] = useState(false);
 
   useEffect(() => {
     var myCollapse = document.getElementById("collapseTarget");
+   
     var bsCollapse = new Collapse(myCollapse, { toggle: false });
+    
     toggle ? bsCollapse.show() : bsCollapse.hide();
+    
   });
+
+  useEffect(() =>{
+    var myCollapse2 = document.getElementById("collapseTarget2");
+    var bsCollapse2 = new Collapse(myCollapse2, { toggle2: false });
+    toggle2 ? bsCollapse2.show() : bsCollapse2.hide();
+  });
+
+
 
   return (
     <section className="dashboard_main_section">
@@ -60,6 +74,7 @@ const Maindashboard = () => {
               </Link>
             </div>
           </li>
+          
           <li>
             <div className="py-1">
               <a className="" onClick={() => setToggle((toggle) => !toggle)}>
@@ -128,6 +143,65 @@ const Maindashboard = () => {
               </div>
             </div>
           </li>
+
+
+
+          <li>
+            <div className="py-1">
+
+              <a className="" onClick={() => setToggle2((toggle2) => !toggle2)}>
+                <div class="list_icon">
+                  <BiGroup size="1.5rem"></BiGroup>
+                </div>
+                <div>
+                  <Link to="">
+                    <p>Enquiry</p>
+                  </Link>
+                </div>
+
+                <div class="list_icon">
+                  <IoIosArrowDown
+                    size="1.6rem"
+                    style={{ paddingBottom: "1px", paddingLeft: "4px" }}
+                  ></IoIosArrowDown>
+                </div>
+              </a>
+
+              <div className="collapse" id="collapseTarget2">
+                <a href="">
+                  <div class="list_icon">
+                    <TiUserDeleteOutline size="1.5rem"></TiUserDeleteOutline>
+                  </div>
+                  <div>
+                    <Link to="/dashboard/unreadEnquiry">
+                      <p>Unread enquiry</p>
+                    </Link>
+                   
+                  </div>
+                </a>
+                <a href="">
+                  <div class="list_icon">
+                    <TiUserDeleteOutline size="1.5rem"></TiUserDeleteOutline>
+                  </div>
+                  <div>
+                  <Link to="/dashboard/readEnquiry">
+                      <p>Read Enquiry</p>
+                    </Link>
+                   
+                  </div>
+                </a>
+                
+
+              </div>
+            </div>
+          </li>
+
+
+
+
+
+
+
           <li>
             <div class="list_icon">
               <GrUpdate size="1.5rem"></GrUpdate>
