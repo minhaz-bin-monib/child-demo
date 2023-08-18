@@ -20,7 +20,7 @@ const Report = () => {
     if(reportData.status == 'All')
     {
         getResultByStatus = users.filter(
-            (user) => user.status == "Accepted" || user.status == "Rejected" || user.status == "Rejected" || user.status == "New"
+            (user) => user.status == "Accepted" || user.status == "Rejected" || user.status == "Onboard" || user.status == "New"
           );
     }
     else{
