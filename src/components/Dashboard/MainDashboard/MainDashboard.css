@@ -55,4 +55,14 @@
     margin-top: 5px;
 }
 
-
+.dashboard_right{
+    width: 477%;
+    border: 1px solid red;
+}
+.dashboard_main_left{
+    width: 25%;
+}
+.rightMainD{
+    width: 900px;
+    margin-left: 600px;
+}

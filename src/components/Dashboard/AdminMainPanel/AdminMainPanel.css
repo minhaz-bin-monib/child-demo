@@ -1,0 +1,26 @@
+.cardDesing{
+    width: 300px;
+    margin-left: 10px;
+    margin-top: 20px;
+    border: 1px solid rgb(11, 32, 221);
+    color: white;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.red{
+    background-color: red;
+}
+.orange{
+    background-color: orange;
+}
+.yellow{
+    background-color: yellow;
+}
+.rightMainD{
+    width: 900px;
+    margin-left: 600px;
+}

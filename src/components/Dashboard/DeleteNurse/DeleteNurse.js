@@ -75,9 +75,6 @@ const DeleteNurse = () => {
 
                     )
 
-
-
-
                 }
 
 

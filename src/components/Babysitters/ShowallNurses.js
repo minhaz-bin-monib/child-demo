@@ -50,10 +50,6 @@ const ShowallNurses = () => {
                             </div>
 
                     )
-
-
-
-
                 }
 
 

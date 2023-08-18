@@ -24,7 +24,13 @@ import Curriculum from "./components/Curriculum/Curriculum";
 import Admission from "./components/Admission/Admission";
 import Events from "./components/Events/Events";
 import SingleStaff from "./components/Babysitters/SingleStaff/SingleStaff";
-
+import AdminMainPanel from "./components/Dashboard/AdminMainPanel/AdminMainPanel";
+import BabySiterTable from "./components/Dashboard/Babysitter/BabySiterTable/BabySiterTable";
+import BabySiterDetails from "./components/Dashboard/Babysitter/BabySiterDetails/BabySiterDetails";
+import BabySiterUpdate from "./components/Dashboard/Babysitter/BabySiterCreate/BabySiterUpdate";
+import BabySiterCreate from "./components/Dashboard/Babysitter/BabySiterCreate/BabySiterCreate";
+import BabySiterDelete from "./components/Dashboard/Babysitter/BabySiterDelete/BabySiterDelete";
+import AddService from "./components/Dashboard/ServiceControls/AddService/AddService";
 
 const router = createBrowserRouter([
   {
@@ -70,10 +76,38 @@ const router = createBrowserRouter([
         element : <UpdateAllNurse></UpdateAllNurse>,
         loader: () => fetch('http://localhost:5000/users')
       },
+      // ************************* DashBoard ************************************
       {
         path : '/dashboard',
-        element : <PrivateRoute><Maindashboard></Maindashboard></PrivateRoute>
+        element : <AdminMainPanel></AdminMainPanel>
       },
+        // ************************* Start BabySiter *******************
+      {
+        path : '/dashboard/babysiter',
+        element : <BabySiterTable></BabySiterTable>,
+        loader: () => fetch('http://localhost:5000/users')
+      },
+      {
+        path : '/dashboard/createbabysiter',
+        element : <BabySiterCreate></BabySiterCreate>
+       
+      },
+      {
+        path : '/dashboard/detailsbabysiter/:id',
+        element : <BabySiterDetails></BabySiterDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`)
+      },
+      {
+        path : '/dashboard/updatebabysiter/:id',
+        element : <BabySiterUpdate></BabySiterUpdate>,
+        loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`)
+      },
+      {
+        path : '/dashboard/deletebabysiter/:id',
+        element : <BabySiterDelete></BabySiterDelete>,
+        loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`)
+      },
+       // ************************* END BabySiter *******************
       {
         path : '/payment',
         element : <Payment></Payment>
@@ -115,7 +149,14 @@ const router = createBrowserRouter([
       {
         path : '/events',
         element : <PrivateRoute><Events></Events></PrivateRoute>
+      },
+      {
+        path : '/dashboard/addService',
+        element : <AddService></AddService>
       }
+
+
+      
       
 
 

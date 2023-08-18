@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../../layout/Navbar/Navbar';
 import Footer from '../../layout/Footer/Footer';
 import './Services.css'
 
 const Services = () => {
+
+   
+
     return (
+
+
+
+
+
+
+        
         <div>
             <Navbar></Navbar>
             <section className="main_section">
@@ -12,7 +22,7 @@ const Services = () => {
                 <div className="container">
                     <h2>Our Given Services</h2>
 
-                    <div className="main_div">
+                    {/* <div className="main_div">
                         <h3>Care of Children</h3>
                         <p> The care of children in the center varies depending on the age group
                             This is a verified and trusted source
@@ -58,7 +68,10 @@ const Services = () => {
                         </p>
 
                         <p className='text-center'><button className='btn btn-danger  apply_now_button'>Apply Now</button></p>
-                    </div>
+                    </div> */}
+
+
+
                 </div>
 
 

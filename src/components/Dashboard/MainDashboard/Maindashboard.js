@@ -22,12 +22,20 @@ const Maindashboard = () => {
             <span className=''></span>
 
             <ul>
+                              <li>
+                                    <div class="list_icon">
+                                    <LiaUserNurseSolid size='2rem'></LiaUserNurseSolid>
+                                    </div>
+                                    <div>
+                                        <Link to="/dashboard"><p>Dashboard</p></Link>
+                                    </div>
+                                </li>
                                 <li>
                                     <div class="list_icon">
                                     <LiaUserNurseSolid size='2rem'></LiaUserNurseSolid>
                                     </div>
                                     <div>
-                                        <Link to="/addNurse"><p>Add Nurse</p></Link>
+                                        <Link to="/dashboard/createbabysiter"><p>Add BabySiter</p></Link>
                                     </div>
                                 </li>
 
@@ -37,7 +45,35 @@ const Maindashboard = () => {
 
                                     </div>
                                     <div>
-                                    <Link to="/updateAllNurses"><p>Update Nurse</p></Link>
+                                    <Link to="/dashboard/addService"><p>Service</p></Link>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_icon">
+                                    <GrUpdate size='1.5rem'></GrUpdate>
+
+                                    </div>
+                                    <div>
+                                    <Link to="#"><p>Enrolement</p></Link>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="list_icon">
+                                    <GrUpdate size='1.5rem'></GrUpdate>
+
+                                    </div>
+                                    <div>
+                                    <Link to="#"><p>Suscriber</p></Link>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_icon">
+                                    <GrUpdate size='1.5rem'></GrUpdate>
+
+                                    </div>
+                                    <div>
+                                    <Link to="#"><p>Query</p></Link>
                                     </div>
                                 </li>
 
@@ -97,7 +133,8 @@ const Maindashboard = () => {
             </div>
 
         </section>
+        
     );
 };
 
-export default Maindashboard;
+export default Maindashboard
