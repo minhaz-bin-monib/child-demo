@@ -28,7 +28,7 @@ const Maindashboard = () => {
 
         <span className=""></span>
 
-        <ul>
+        <ul className="overflow-auto" style={{height: '600px'}}>
           <li>
             <div class="list_icon">
               <LiaUserNurseSolid size="2rem"></LiaUserNurseSolid>
@@ -61,16 +61,73 @@ const Maindashboard = () => {
             </div>
           </li>
           <li>
-            <div class="list_icon">
-              <GrUpdate size="1.5rem"></GrUpdate>
-            </div>
-            <div>
-              <Link to="#">
-                <p>Enrolement</p>
-              </Link>
+            <div className="py-1">
+              <a className="" onClick={() => setToggle((toggle) => !toggle)}>
+                <div class="list_icon">
+                  <TiUserDeleteOutline size="1.5rem"></TiUserDeleteOutline>
+                </div>
+                <div>
+                  <Link to="">
+                    <p>Enrollments</p>
+                  </Link>
+                </div>
+
+                <div class="list_icon">
+                  <IoIosArrowDown
+                    size="1.6rem"
+                    style={{ paddingBottom: "1px", paddingLeft: "4px" }}
+                  ></IoIosArrowDown>
+                </div>
+              </a>
+              <div className="collapse" id="collapseTarget">
+                <a href="">
+                  <div class="list_icon">
+                    <TiUserDeleteOutline size="1.5rem"></TiUserDeleteOutline>
+                  </div>
+                  <div>
+                    <Link to="/dashboard/enrolment">
+                      <p>New Enrollments</p>
+                    </Link>
+                   
+                  </div>
+                </a>
+                <a href="">
+                  <div class="list_icon">
+                    <TiUserDeleteOutline size="1.5rem"></TiUserDeleteOutline>
+                  </div>
+                  <div>
+                  <Link to="/dashboard/acceptedenrolment">
+                      <p>Accepted Enrollments</p>
+                    </Link>
+                   
+                  </div>
+                </a>
+                <a href="">
+                  <div class="list_icon">
+                    <TiUserDeleteOutline size="1.5rem"></TiUserDeleteOutline>
+                  </div>
+                  <div>
+                  <Link to="/dashboard/onboardenrolment">
+                      <p>Onboard Enrollments</p>
+                    </Link>
+                   
+                  </div>
+                </a>
+                <a href="">
+                  <div class="list_icon">
+                    <TiUserDeleteOutline size="1.5rem"></TiUserDeleteOutline>
+                  </div>
+                  <div>
+                  <Link to="/dashboard/rejectedenrolment">
+                      <p>Rejected Enrollments</p>
+                    </Link>
+                   
+                  </div>
+                </a>
+
+              </div>
             </div>
           </li>
-
           <li>
             <div class="list_icon">
               <GrUpdate size="1.5rem"></GrUpdate>
@@ -98,61 +155,6 @@ const Maindashboard = () => {
             <div>
               <Link to="/dashboard/report">
                 <p>Report</p>
-              </Link>
-            </div>
-          </li>
-
-          <li>
-            <div class="list_icon">
-              <TiUserDeleteOutline size="1.5rem"></TiUserDeleteOutline>
-            </div>
-            <div>
-              <Link to="/deleteNurse">
-                <p>Curriculum</p>
-              </Link>
-            </div>
-          </li>
-
-          <li>
-            <div class="list_icon">
-              <TiUserDeleteOutline size="1.5rem"></TiUserDeleteOutline>
-            </div>
-            <div>
-              <Link to="/deleteNurse">
-                <p>Update Curriculum</p>
-              </Link>
-            </div>
-          </li>
-
-          <li>
-            <div class="list_icon">
-              <TiUserDeleteOutline size="1.5rem"></TiUserDeleteOutline>
-            </div>
-            <div>
-              <Link to="/deleteNurse">
-                <p>Delete Curriculum</p>
-              </Link>
-            </div>
-          </li>
-
-          <li>
-            <div class="list_icon">
-              <TiUserDeleteOutline size="1.5rem"></TiUserDeleteOutline>
-            </div>
-            <div>
-              <Link to="/deleteNurse">
-                <p>Activities</p>
-              </Link>
-            </div>
-          </li>
-
-          <li>
-            <div class="list_icon">
-              <TiUserDeleteOutline size="1.5rem"></TiUserDeleteOutline>
-            </div>
-            <div>
-              <Link to="/deleteNurse">
-                <p>Update Activities</p>
               </Link>
             </div>
           </li>
