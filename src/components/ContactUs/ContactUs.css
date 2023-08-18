@@ -6,3 +6,13 @@
 .contactUs_main_div{
 
 }
+
+.contact_us_form{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.form_div{
+    width: 90%;
+}
