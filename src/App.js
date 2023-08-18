@@ -136,7 +136,8 @@ const router = createBrowserRouter([
       {
         path : '/dashboard/rejectedenrolment',
         element :<RejectedEnrolment></RejectedEnrolment>,
-        loader: () => fetch('http://localhost:5000/enrollment')
+        loader: () => fetch('http://localhost:5000/enrollment'),
+        
       },
        
        {

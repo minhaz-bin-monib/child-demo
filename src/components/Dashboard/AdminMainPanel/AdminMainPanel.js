@@ -11,7 +11,7 @@ const AdminMainPanel = () => {
     const [Suscribers, setSuscribers] = useState([]);
     const [services, setServices] = useState([]);
 
-    // console.log(babySiters);
+    console.log(babySiters);
     useEffect(() => {
         fetch('http://localhost:5000/enrollment',{
         method: 'get',
@@ -49,6 +49,27 @@ const AdminMainPanel = () => {
 
       }, []);
 
+
+
+
+    //   useEffect(()=>{
+    //     fetch('http://localhost:5000/enrollment')
+    //     .then(res => res.json())
+    //     .then(data => setEnrolments(data))
+    // },[enrolments])
+
+    // useEffect(()=>{
+    //     fetch('http://localhost:5000/subscribers')
+    //     .then(res => res.json())
+    //     .then(data => setSuscribers(data))
+    // },[Suscribers])
+
+    // useEffect(()=>{
+    //     fetch('http://localhost:5000/services')
+    //     .then(res => res.json())
+    //     .then(data => setServices(data))
+    // },[services])
+
     
     // console.log(enrolments);
     // console.log(services);
@@ -63,7 +84,8 @@ const AdminMainPanel = () => {
 
     return (
         <div>
-            <Maindashboard></Maindashboard>
+            <Maindashboard></Maindashboard> <span style={{display:'block', height:'82px', width:'1090px', backgroundColor:'ghostwhite',marginLeft:'256px'}}></span>
+            
             <div className="container rightMainD" style={{
                 width: '1000px', marginRight: '1px',
                 marginLeft: '280px'
