@@ -9,6 +9,7 @@ import Footer from '../../layout/Footer/Footer';
 import nurses from "./HmImage/nurses.png"
 import { Link } from 'react-router-dom';
 import facalitiPic from './HmImage/Childcare-Renovation-Infographic-1-980x1470.png (1).jpg'
+import Subscribers from '../Subcribers/Subscribers';
 
 const MainSections = () => {
   return (
@@ -75,6 +76,10 @@ const MainSections = () => {
 
 
       <ContactUs></ContactUs>
+
+
+      <Subscribers></Subscribers>
+
       <Footer></Footer>
 
 

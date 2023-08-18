@@ -31,6 +31,7 @@ import BabySiterUpdate from "./components/Dashboard/Babysitter/BabySiterCreate/B
 import BabySiterCreate from "./components/Dashboard/Babysitter/BabySiterCreate/BabySiterCreate";
 import BabySiterDelete from "./components/Dashboard/Babysitter/BabySiterDelete/BabySiterDelete";
 import AddService from "./components/Dashboard/ServiceControls/AddService/AddService";
+import Enrollment from "./components/Enrollment/Enrollment";
 
 const router = createBrowserRouter([
   {
@@ -153,6 +154,10 @@ const router = createBrowserRouter([
       {
         path : '/dashboard/addService',
         element : <AddService></AddService>
+      },
+      {
+        path : '/enroll',
+        element : <Enrollment></Enrollment>
       }
 
 
