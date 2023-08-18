@@ -31,7 +31,7 @@ const AdminMainPanel = () => {
                             <Card.Title>6</Card.Title>
 
 
-                            <Card.Link href="#">More..</Card.Link>
+                            <Card.Link href="#">Suscriber More..</Card.Link>
 
                         </Card.Body>
                     </Card>
@@ -41,7 +41,7 @@ const AdminMainPanel = () => {
                             <Card.Title>6</Card.Title>
 
 
-                            <Card.Link href="#">More..</Card.Link>
+                            <Card.Link href="#">Service More..</Card.Link>
 
                         </Card.Body>
                     </Card>
@@ -51,7 +51,7 @@ const AdminMainPanel = () => {
                             <Card.Title>6</Card.Title>
 
 
-                            <Card.Link href="#">More..</Card.Link>
+                            <Card.Link href="/dashboard/enrolment">New Enrolement More..</Card.Link>
 
                         </Card.Body>
                     </Card>
@@ -61,11 +61,32 @@ const AdminMainPanel = () => {
                             <Card.Title>6</Card.Title>
 
 
-                            <Card.Link href="#">More..</Card.Link>
+                            <Card.Link href="#">Accepted Enrolement More..</Card.Link>
 
                         </Card.Body>
                     </Card>
 
+                    <Card className='cardDesing blue'>
+                        <Card.Body>
+                            <Card.Title>6</Card.Title>
+
+
+                            <Card.Link href="#">Onboard Enrolement..</Card.Link>
+
+                        </Card.Body>
+                    </Card>
+
+                    
+                    <Card className='cardDesing blue'>
+                        <Card.Body>
+                            <Card.Title>6</Card.Title>
+
+
+                            <Card.Link href="#">Rejected Enrolement..</Card.Link>
+
+                        </Card.Body>
+                    </Card>
+                    
 
                 </div>
             </div>

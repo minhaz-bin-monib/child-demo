@@ -32,6 +32,8 @@ import BabySiterCreate from "./components/Dashboard/Babysitter/BabySiterCreate/B
 import BabySiterDelete from "./components/Dashboard/Babysitter/BabySiterDelete/BabySiterDelete";
 import AddService from "./components/Dashboard/ServiceControls/AddService/AddService";
 import Enrollment from "./components/Enrollment/Enrollment";
+import NewEnrollementContoll from "./components/Dashboard/EnrollmentControll/NewEnrollmentControll"
+import EditEnrolementStatus from "./components/Dashboard/EnrollmentControll/EditEnrolementStatus";
 
 const router = createBrowserRouter([
   {
@@ -109,6 +111,22 @@ const router = createBrowserRouter([
         loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`)
       },
        // ************************* END BabySiter *******************
+
+       // ********************* START Enrolment ***********************
+       {
+        path : '/dashboard/enrolment',
+        element : <NewEnrollementContoll></NewEnrollementContoll>,
+        loader: () => fetch('http://localhost:5000/enrollment')
+      },
+       
+       {
+        path : '/dashboard/editenrolment/:id',
+        element : <EditEnrolementStatus></EditEnrolementStatus>,
+        loader: ({params}) => fetch(`http://localhost:5000/enrollment/${params.id}`)
+      },
+       
+       // ********************* EDN Enrolment ***********************
+
       {
         path : '/payment',
         element : <Payment></Payment>
