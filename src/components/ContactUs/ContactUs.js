@@ -42,7 +42,8 @@ const ContactUs = () => {
       phone: enquery.phone,
       email: enquery.email,
       message: enquery.message,
-        currentDate : currentDate
+      currentDate : currentDate,
+      status : 'new'
 
     }
     console.log(eventData);
