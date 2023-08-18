@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import logo from './logo_prev_ui.png';
-import  { AuthContext } from '../../contexts/UserContext';
+import { AuthContext } from '../../contexts/UserContext';
 
 import { Dropdown } from 'react-bootstrap';
 
@@ -23,7 +23,7 @@ const Navbar = () => {
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="navbar-nav ms-auto me-auto mb-2 mb-lg-0" >
+                            <ul className="navbar-nav ms-auto mb-2 mb-lg-0" >
 
                                 <li className="nav-item">
                                     <a className="nav-link " href="#"><Link className='main-text-style' to='/main'>Home</Link></a>
@@ -32,7 +32,7 @@ const Navbar = () => {
                                 <li className="nav-item">
                                     <a className="nav-link" href='#' ><Link className='main-text-style' to='/allnurses'>Team</Link></a>
                                 </li>
-                                
+
                                 <li className="nav-item">
                                     <a className="nav-link" href='#'><Link className='main-text-style' to='/programs'>Programs</Link></a>
 
@@ -51,14 +51,18 @@ const Navbar = () => {
                                     <a className="nav-link" href='#'><Link className='main-text-style' to='/services'>Services</Link></a>
 
                                 </li>
-                                
+
                                 <li className="nav-item">
                                     <a className="nav-link" href='#'><Link className='main-text-style' to='/enroll'>Enrollment</Link></a>
 
                                 </li>
-                                
-
                                 <li className="nav-item">
+                                    <a className="nav-link" target='_blank' href='#'><Link className='main-text-style' to='/dashboard'>Admin</Link></a>
+
+                                </li>
+
+
+                                {/* <li className="nav-item">
                                 {
                                     
                                     user?.uid === "qyy039iXPlUlcfGTcZa9p4jKarq2"  ? 
@@ -69,47 +73,49 @@ const Navbar = () => {
                                     <span></span>
                                     
                                 }
-                                </li>
+                                </li> */}
 
 
 
                             </ul>
 
-                            <form className="d-flex">
+                            {/* <div>
+                                <form className="d-flex">
 
 
-                                {user?.uid ?
+                                    {user?.uid ?
 
-                                    <>
-                                        <button onClick={logOut} className='btn btn-danger'><Link style={{ color: "white" }} className='main-text-style' to='/main'>Logout</Link></button>
-                                        {/* <div>
-                                            <Link to='/dashboard'><p className='admin_style'><span className='font-style'>Admin</span></p></Link>
-                                        </div> */}
-                                    </>
-
-
-                                    :
-                                    <button className='btn btn-danger'><Link style={{ color: "white" }} className='main-text-style' to='/login'>Login</Link></button>
-                                    
-
-                                }
-                                {
-                                    
-                                    user?.uid === "qyy039iXPlUlcfGTcZa9p4jKarq2"  ? 
-                                    <>
-                                    <div>
-                                            <Link to='/dashboard'><p className='admin_style'><span className='font-style'>Admin</span></p></Link>
-                                        </div>
-                                    </>
-                                    :
-                                    <span></span>
-                                    
-                                }
-                                
-                                
+                                        <>
+                                            <button onClick={logOut} className='btn btn-danger'><Link style={{ color: "white" }} className='main-text-style' to='/main'>Logout</Link></button>
+                                            <div>
+            <Link to='/dashboard'><p className='admin_style'><span className='font-style'>Admin</span></p></Link>
+        </div>
+                                        </>
 
 
-                            </form>
+                                        :
+                                        <button className='btn btn-danger'><Link style={{ color: "white" }} className='main-text-style' to='/login'>Login</Link></button>
+
+
+                                    }
+                                    {
+
+                                        user?.uid === "qyy039iXPlUlcfGTcZa9p4jKarq2" ?
+                                            <>
+                                                <div>
+                                                    <Link to='/dashboard'><p className='admin_style'><span className='font-style'>Admin</span></p></Link>
+                                                </div>
+                                            </>
+                                            :
+                                            <span></span>
+
+                                    }
+
+
+
+
+                                </form>
+                            </div> */}
 
                         </div>
                     </div>
