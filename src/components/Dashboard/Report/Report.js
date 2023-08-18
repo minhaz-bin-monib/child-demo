@@ -32,7 +32,7 @@ const Report = () => {
         let dbDate = +row.currentDate.split('-');
         //let 
     
-      return rowDate >= reportData.start.Date && rowDate <= reportData.end.Date;
+     // return rowDate >= reportData.start.Date && rowDate <= reportData.end.Date;
     });
     console.log(result);
     setDisplayUsers(result);
