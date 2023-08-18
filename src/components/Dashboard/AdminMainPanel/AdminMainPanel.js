@@ -164,12 +164,8 @@ const AdminMainPanel = () => {
                         </Card.Body>
                     </Card>
                     
-
                 </div>
             </div>
-
-
-
 
         </div>
     );
