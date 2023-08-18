@@ -46,14 +46,14 @@ const ContactUs = () => {
        </div>
       </div>
 
-      {/* <!-- map section start --> */}
-    <section class="map row">
+      
+    {/* <section class="map row">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.8886980296834!2d90.39124041445722!3d23.822556591934035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c77cbb1fa9e5%3A0x569577792aeedbc0!2sECB%20Chattar!5e0!3m2!1sbn!2sbd!4v1663343202483!5m2!1sbn!2sbd"
             width="100%" height="400" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-    {/* <!-- map section end --> */}
+    </section> */}
+    
     </div>
   );
 };

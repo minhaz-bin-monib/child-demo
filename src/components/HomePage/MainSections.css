@@ -8,9 +8,28 @@
 
 .banner-section{
 
-padding-top: 90px;
+    padding-top: 0px;
+    background-image: url(./HmImage/babysitter-main.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+    position: relative;
+    z-index: 0;
 }
+    
 
+.banner-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #dbdbdb;
+    opacity: 0.1;
+    z-index: -1;
+}
 .banner-left{
 
 padding-top: 50px;
@@ -19,7 +38,7 @@ padding-left: 20px;
 }
 
 .banner-left h2{
-    
+    padding-top: 90px;
 color: #e52159;
     
 font-size: 40px;
@@ -33,7 +52,7 @@ margin-top: 20px;
     
 margin-bottom: 10px;
     
-width: 85%;
+width: 65%;
 
 
 

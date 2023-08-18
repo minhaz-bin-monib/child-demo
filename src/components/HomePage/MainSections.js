@@ -16,7 +16,7 @@ const MainSections = () => {
     <div>
       <Navbar></Navbar>
       <section class="banner-section">
-        <Particle></Particle>
+        {/* <Particle></Particle> */}
         <div class="container">
           <div class="row">
             <div class="col-md-5">
@@ -27,11 +27,11 @@ const MainSections = () => {
               </div>
             </div>
 
-            <div class="col-md-7">
+            {/* <div class="col-md-7">
               <div class="banner-right">
                 <img src={bannerImg} class="img-fluid" alt="" />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
