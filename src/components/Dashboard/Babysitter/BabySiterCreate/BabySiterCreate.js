@@ -36,6 +36,7 @@ const BabySiterCreate = () => {
         .then(res => res.json())
         .then(data => {
             if(data.acknowledged){
+                window.location.href = '/dashboard/babysiter'
                 alert('User added successfully');
                 event.target.reset();
             }

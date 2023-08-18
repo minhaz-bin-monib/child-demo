@@ -5,8 +5,10 @@ import Maindashboard from '../MainDashboard/Maindashboard';
 
 const EnrollmentControll = () => {
 
-    const users = useLoaderData();
+    const users = useLoaderData().filter(f => f.status === 'New');
     const [displayUsers, setDisplayUsers] = useState(users);
+
+    
 
 
     return (
@@ -17,18 +19,18 @@ const EnrollmentControll = () => {
             marginLeft: '280px', marginTop: '15px'
         }}>
             {/* Loop on data  */}
-            <h3 className='text-center'>New Enrolment</h3>
+            <h3 className='text-center'>New Enrolments</h3>
             <Table striped bordered hover>
                 <thead>
                     <tr>
 
-                        <th>Parent</th>
-                        <th>Child Name</th>
+                    <th>Enroll Id</th>
+                    <th>Parent</th>
                         <th>program</th>
                         <th>Address</th>
                         <th>Phone</th>
                         <th>Email</th>
-                        <th>Country</th>
+                        <th>Status</th>
                         <th>Action</th>
 
                     </tr>
@@ -40,13 +42,14 @@ const EnrollmentControll = () => {
                         displayUsers.map(
                             user =>
                                 <tr>
+                                     <td>{user._id}</td>
                                     <td>{user.name}</td>
-                                    <td>{user.childName}</td>
                                     <td>{user.program}</td>
                                     <td>{user.address}</td>
                                     <td>{user.mobile1}</td>
                                     <td>{user.email}</td>
-                                    <td>{user.country}</td>
+                                   
+                                    <td>{user.status}</td>
                                     <td>
                                         {/* Id Pass */}
                                         <Link className='btn btn-sm btn-primary' to={`/dashboard/editenrolment/${user._id}`}>Update Status</Link>
@@ -59,7 +62,6 @@ const EnrollmentControll = () => {
 
                 </tbody>
             </Table>
-
 
         </div>
     </div>

@@ -1,9 +1,64 @@
 
+import { useState, useEffect  } from 'react';
 import { Card } from 'react-bootstrap';
+import { useLoaderData } from 'react-router-dom';
 import Maindashboard from '../MainDashboard/Maindashboard';
 import "./AdminMainPanel.css"
 
 const AdminMainPanel = () => {
+    const babySiters = useLoaderData();
+    const [enrolments, setEnrolments] = useState([]);
+    const [Suscribers, setSuscribers] = useState([]);
+    const [services, setServices] = useState([]);
+
+    // console.log(babySiters);
+    useEffect(() => {
+        fetch('http://localhost:5000/enrollment',{
+        method: 'get',
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+    .then(res => res.json())
+    .then(data => {
+       setEnrolments(data);
+    })
+
+    fetch('http://localhost:5000/subscribers',{
+        method: 'get',
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+    .then(res => res.json())
+    .then(data => {
+       setSuscribers(data);
+    })
+
+    fetch('http://localhost:5000/services',{
+        method: 'get',
+        headers: {
+            'content-type': 'application/json'
+        }
+      
+    })
+    .then(res => res.json())
+    .then(data => {
+       setServices(data);
+    })
+
+      }, []);
+
+    
+    // console.log(enrolments);
+    // console.log(services);
+    // console.log(Suscribers);
+
+    let newEnrolments = enrolments.filter(f => f.status == 'New');
+    let acceptedEnrolments =  enrolments.filter(f => f.status == 'Accepted');
+    let onboardEnrolments = enrolments.filter(f => f.status == 'Onboard');
+    let rejectedEnrolments = enrolments.filter(f => f.status == 'Rejected');
+
 
 
     return (
@@ -18,7 +73,7 @@ const AdminMainPanel = () => {
 
                     <Card className='cardDesing blue'>
                         <Card.Body>
-                            <Card.Title>6</Card.Title>
+                            <Card.Title>{babySiters.length}</Card.Title>
 
 
                             <Card.Link href="/dashboard/babysiter">Baby Siter More..</Card.Link>
@@ -28,7 +83,7 @@ const AdminMainPanel = () => {
 
                     <Card className='cardDesing blue'>
                         <Card.Body>
-                            <Card.Title>6</Card.Title>
+                            <Card.Title>{Suscribers.length}</Card.Title>
 
 
                             <Card.Link href="#">Suscriber More..</Card.Link>
@@ -38,7 +93,7 @@ const AdminMainPanel = () => {
 
                     <Card className='cardDesing blue'>
                         <Card.Body>
-                            <Card.Title>6</Card.Title>
+                            <Card.Title>{services.length}</Card.Title>
 
 
                             <Card.Link href="#">Service More..</Card.Link>
@@ -48,7 +103,7 @@ const AdminMainPanel = () => {
 
                     <Card className='cardDesing blue'>
                         <Card.Body>
-                            <Card.Title>6</Card.Title>
+                            <Card.Title>{newEnrolments.length}</Card.Title>
 
 
                             <Card.Link href="/dashboard/enrolment">New Enrolement More..</Card.Link>
@@ -58,20 +113,20 @@ const AdminMainPanel = () => {
 
                     <Card className='cardDesing blue'>
                         <Card.Body>
-                            <Card.Title>6</Card.Title>
+                            <Card.Title>{acceptedEnrolments.length}</Card.Title>
 
 
-                            <Card.Link href="#">Accepted Enrolement More..</Card.Link>
+                            <Card.Link href="/dashboard/acceptedenrolment">Accepted Enrolement More..</Card.Link>
 
                         </Card.Body>
                     </Card>
 
                     <Card className='cardDesing blue'>
                         <Card.Body>
-                            <Card.Title>6</Card.Title>
+                            <Card.Title>{onboardEnrolments.length}</Card.Title>
 
 
-                            <Card.Link href="#">Onboard Enrolement..</Card.Link>
+                            <Card.Link href="/dashboard/onboardenrolment">Onboard Enrolement..</Card.Link>
 
                         </Card.Body>
                     </Card>
@@ -79,10 +134,10 @@ const AdminMainPanel = () => {
                     
                     <Card className='cardDesing blue'>
                         <Card.Body>
-                            <Card.Title>6</Card.Title>
+                            <Card.Title>{rejectedEnrolments.length}</Card.Title>
 
 
-                            <Card.Link href="#">Rejected Enrolement..</Card.Link>
+                            <Card.Link href="/dashboard/rejectedenrolment">Rejected Enrolement..</Card.Link>
 
                         </Card.Body>
                     </Card>
