@@ -37,6 +37,7 @@ import EditEnrolementStatus from "./components/Dashboard/EnrollmentControll/Edit
 import AcceptedEnrolment from "./components/Dashboard/EnrollmentControll/AcceptedEnrolment";
 import HoldingEnrolment from "./components/Dashboard/EnrollmentControll/HoldingEnrolment";
 import RejectedEnrolment from "./components/Dashboard/EnrollmentControll/RejectedEnrolment";
+import Report from "./components/Dashboard/Report/Report";
 
 const router = createBrowserRouter([
   {
@@ -146,7 +147,12 @@ const router = createBrowserRouter([
       },
        
        // ********************* EDN Enrolment ***********************
-
+       // ************************* Report ***********************
+       {
+        path : '/dashboard/report',
+        element : <Report></Report>,
+        loader: () => fetch('http://localhost:5000/enrollment')
+      },
       {
         path : '/payment',
         element : <Payment></Payment>

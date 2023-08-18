@@ -76,6 +76,16 @@ const Maindashboard = () => {
                                     <Link to="#"><p>Query</p></Link>
                                     </div>
                                 </li>
+                                <li>
+                                    <div class="list_icon">
+                                    <GrUpdate size='1.5rem'></GrUpdate>
+
+                                    </div>
+                                    <div>
+                                    <Link to="/dashboard/report"><p>Report</p></Link>
+                                    </div>
+                                </li>
+
 
                                 <li>
                                     <div class="list_icon">
