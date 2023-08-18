@@ -36,6 +36,7 @@ const Enrollment = () => {
             city: enrollment.city,
             state: enrollment.state,
             country: enrollment.country,
+            landmark: enrollment.landmark,
             currentDate : currentDate,
             status: "New"
         }
@@ -158,6 +159,10 @@ const Enrollment = () => {
                         <div className='from-control col-6 mb-3'>
                         <label >Country</label>
                         <input className="form-control" onBlur={handleServiceBlur} type="text" name='country' placeholder='Country' required />
+                        </div>
+                        <div className='from-control col-6 mb-3'>
+                        <label >LandMark</label>
+                        <input className="form-control" onBlur={handleServiceBlur} type="text" name='landmark' placeholder='Country' required />
                         </div>
 
                         </div>

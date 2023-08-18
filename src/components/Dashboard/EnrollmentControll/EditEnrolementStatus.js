@@ -7,6 +7,8 @@ const EditEnrolementStatus = () => {
     const users = useLoaderData();
     const [enrolment, setEnrolment] = useState({});
 
+    console.log(users);
+
     const {_id, name, childName, mobile1, email, program, gender, address, city, country, status, } = users;
 
 
@@ -33,7 +35,9 @@ const EditEnrolementStatus = () => {
             if(data.acknowledged){
                 alert('User updated successfully');
                 event.target.reset();
-                window.history.push('/dashboard/babysiter');
+             
+               window.location.href = '/dashboard'
+               
             }
         })
     }
@@ -67,51 +71,51 @@ const EditEnrolementStatus = () => {
                     <form onSubmit={handleAddEnrollment}>
                          <h6>Primary Details</h6>
                     <div className="row">
-                        <div className='from-control col-6 mb-3'>
-                             <p  className="form-control"> Parent Name: {name} </p>
+                        <div className=' col-6 mb-3'>
+                             <p  > Parent Name: {name} </p>
                         </div>
                        
-                        <div className='from-control col-6 mb-3'>
-                            <p  className="form-control"> Phone: {mobile1} </p>
+                        <div className=' col-6 mb-3'>
+                            <p  > Phone: {mobile1} </p>
                         </div>
-                        <div className='from-control col-6 mb-3'>
-                            <p  className="form-control"> Email: {email} </p>
+                        <div className=' col-6 mb-3'>
+                            <p  > Email: {email} </p>
                         </div>
-                        <div className='from-control col-6 mb-3'>
-                             <p  className="form-control"> Email: {email} </p>
+                        <div className=' col-6 mb-3'>
+                             <p  > Email: {email} </p>
                         </div>
-                        <div className='from-control col-6 mb-3'>
-                            <p  className="form-control"> Child Name: {childName} </p>
+                        <div className=' col-6 mb-3'>
+                            <p  > Child Name: {childName} </p>
                         </div>
-                        <div className='from-control col-6 mb-3'>
-                        <p  className="form-control"> Child Gender: {gender} </p>
+                        <div className=' col-6 mb-3'>
+                        <p  > Child Gender: {gender} </p>
                         </div>
-                        <div className='from-control col-6 mb-3'>
-                             <p  className="form-control"> Program: {program} </p>
+                        <div className=' col-6 mb-3'>
+                             <p  > Program: {program} </p>
                         </div>
                        
                         <br />
-                        <div className='from-control col-6 mb-3'>
-                             <p  className="form-control"> Address: {address} </p>
+                        <div className=' col-6 mb-3'>
+                             <p  > Address: {address} </p>
                         </div>
                       
-                        <div className='from-control col-6 mb-3'>
+                        <div className=' col-6 mb-3'>
                        
-                        <p  className="form-control"> Citry: {city} </p>
+                        <p  > Citry: {city} </p>
                         </div>
-                        <div className='from-control col-6 mb-3'>
-                            <p  className="form-control"> Country: {country} </p>
+                        <div className=' col-6 mb-3'>
+                            <p  > Country: {country} </p>
                         </div>
-                        <div className='from-control col-6 mb-3'>
-                            <p  className="form-control"> Country: {country} </p>
+                        <div className=' col-6 mb-3'>
+                            <p  > Country: {country} </p>
                         </div>
-                        <div className='from-control col-6 mb-3'>
-                                <h6>Please Change Status: Now {status}</h6>
+                        <div className='form-control col-6 mb-3'>
+                                <h6>Please Change Status from "{status}" To Other</h6>
                                 <select className="form-control" onBlur={handleServiceBlur} name='status' required >
                                     <option value="" selected disabled>select</option>
                                     <option value="Accepted">Accepted</option>
                                     <option value="Onboard">Onboard</option>
-                                    <option value="Reject">Reject</option>
+                                    <option value="Rejected">Rejected</option>
                         </select> 
 
                         </div>

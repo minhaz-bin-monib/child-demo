@@ -22,7 +22,8 @@ const BabySiterDelete = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    window.history.push('/dashboard/babysiter');
+                   
+                    window.location.href = '/dashboard/babysiter'
 
                 });
         }

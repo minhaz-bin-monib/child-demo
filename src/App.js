@@ -34,6 +34,9 @@ import AddService from "./components/Dashboard/ServiceControls/AddService/AddSer
 import Enrollment from "./components/Enrollment/Enrollment";
 import NewEnrollementContoll from "./components/Dashboard/EnrollmentControll/NewEnrollmentControll"
 import EditEnrolementStatus from "./components/Dashboard/EnrollmentControll/EditEnrolementStatus";
+import AcceptedEnrolment from "./components/Dashboard/EnrollmentControll/AcceptedEnrolment";
+import HoldingEnrolment from "./components/Dashboard/EnrollmentControll/HoldingEnrolment";
+import RejectedEnrolment from "./components/Dashboard/EnrollmentControll/RejectedEnrolment";
 
 const router = createBrowserRouter([
   {
@@ -82,13 +85,15 @@ const router = createBrowserRouter([
       // ************************* DashBoard ************************************
       {
         path : '/dashboard',
-        element : <AdminMainPanel></AdminMainPanel>
+        element : <AdminMainPanel></AdminMainPanel>,
+        loader: () => fetch('http://localhost:5000/users'),
+
       },
         // ************************* Start BabySiter *******************
       {
         path : '/dashboard/babysiter',
         element : <BabySiterTable></BabySiterTable>,
-        loader: () => fetch('http://localhost:5000/users')
+        loader: () => fetch('http://localhost:5000/users'),
       },
       {
         path : '/dashboard/createbabysiter',
@@ -116,6 +121,21 @@ const router = createBrowserRouter([
        {
         path : '/dashboard/enrolment',
         element : <NewEnrollementContoll></NewEnrollementContoll>,
+        loader: () => fetch('http://localhost:5000/enrollment')
+      },
+      {
+        path : '/dashboard/acceptedenrolment',
+        element : <AcceptedEnrolment></AcceptedEnrolment>,
+        loader: () => fetch('http://localhost:5000/enrollment')
+      },
+      {
+        path : '/dashboard/onboardenrolment',
+        element : <HoldingEnrolment></HoldingEnrolment>,
+        loader: () => fetch('http://localhost:5000/enrollment')
+      },
+      {
+        path : '/dashboard/rejectedenrolment',
+        element :<RejectedEnrolment></RejectedEnrolment>,
         loader: () => fetch('http://localhost:5000/enrollment')
       },
        
