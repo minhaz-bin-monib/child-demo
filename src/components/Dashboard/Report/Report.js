@@ -20,7 +20,7 @@ const Report = () => {
     if(reportData.status == 'All')
     {
         getResultByStatus = users.filter(
-            (user) => user.status == "Accepted" || user.status == "Rejected" || user.status == "Rejected"
+            (user) => user.status == "Accepted" || user.status == "Rejected" || user.status == "Onboard" || user.status == "New"
           );
     }
     else{
@@ -28,12 +28,28 @@ const Report = () => {
             (user) => user.status === reportData.status
           );
     }
-    let result = getResultByStatus.filter((row) => {
-        let dbDate = +row.currentDate.split('-');
-        //let 
-    
-     // return rowDate >= reportData.start.Date && rowDate <= reportData.end.Date;
-    });
+    const result = getResultByStatus.filter(row => {
+      const dbDate = row.currentDate?.split('-').map(Number);
+      const startDate = reportData.start?.split('-').map(Number);
+      const endDate = reportData.end?.split('-').map(Number);
+  
+      if (dbDate && startDate && endDate) {
+          const [dbYear, dbMonth, dbDay] = dbDate;
+          const [startYear, startMonth, startDay] = startDate;
+          const [endYear, endMonth, endDay] = endDate;
+  
+          if (
+              dbYear >= startYear && dbYear <= endYear &&
+              dbMonth >= startMonth && dbMonth <= endMonth &&
+              dbDay >= startDay && dbDay <= endDay
+          ) {
+              return true;
+          }
+      }
+  
+      return false;
+  });
+  
     console.log(result);
     setDisplayUsers(result);
     setIsShowReport(true);
@@ -51,7 +67,7 @@ const Report = () => {
 
   return (
     <div>
-      <Maindashboard></Maindashboard>
+      <Maindashboard></Maindashboard><span style={{display:'block', height:'82px', width:'1090px', backgroundColor:'ghostwhite',marginLeft:'256px'}}></span>
       <div
         className="container rightMainD"
         style={{
