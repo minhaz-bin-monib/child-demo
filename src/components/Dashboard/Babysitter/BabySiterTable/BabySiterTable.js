@@ -15,11 +15,12 @@ const BabySiterTable = () => {
 
     return (
         <div>
-            <Maindashboard></Maindashboard> <span style={{display:'block', height:'82px', width:'1090px', backgroundColor:'ghostwhite',marginLeft:'256px'}}></span>
+            <Maindashboard></Maindashboard> <span style={{display:'block', height:'60px', width:'1100px', backgroundColor:'ghostwhite',marginLeft:'256px'}}></span>
             <div className="container rightMainD" style={{
                 width: '1000px', marginRight: '1px',
                 marginLeft: '280px', marginTop: '15px'
             }}>
+                <h3 className='mb-2'>All baby Sitters: </h3>
                 {/* Loop on data  */}
                 <Table striped bordered hover>
                     <thead>
@@ -27,7 +28,7 @@ const BabySiterTable = () => {
 
                             <th>Name</th>
                             <th>Address</th>
-
+                            <th>Email</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -47,9 +48,9 @@ const BabySiterTable = () => {
 
                                         <td>
                                             {/* Id Pass */}
-                                            <Link className='btn' to={`/dashboard/detailsbabysiter/${user._id}`}>Details</Link>
-                                            <Link className='btn' to={`/dashboard/updatebabysiter/${user._id}`}>Update</Link>
-                                            <Link className='btn' to={`/dashboard/deletebabysiter/${user._id}`}>Delete</Link>
+                                            <Link className='btn btn-secondary me-2' to={`/dashboard/detailsbabysiter/${user._id}`}>Details</Link>
+                                            <Link className='btn btn-warning me-2' to={`/dashboard/updatebabysiter/${user._id}`}>Update</Link>
+                                            <Link className='btn btn-danger me-2' to={`/dashboard/deletebabysiter/${user._id}`}>Delete</Link>
                                            
                                         </td>
                                     </tr>
@@ -60,6 +61,9 @@ const BabySiterTable = () => {
 
 
                         }
+                        
+                        <button></button>
+                        <Link className='btn btn-primary mt-5' to="/dashboard/createbabysiter">Create New Babysitter</Link>
 
 
 

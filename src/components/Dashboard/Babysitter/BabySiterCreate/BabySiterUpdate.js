@@ -5,7 +5,7 @@ import Maindashboard from '../../MainDashboard/Maindashboard';
 const BabySiterUpdate = () => {
     
     const users = useLoaderData();
-    const {_id, name, address, email, imageURL} = users;
+    const {_id, name, address, email, imageURL,qualification} = users;
     console.log(_id, name, address, email, imageURL);
     const [displayUsers, setDisplayUsers] = useState(users);
 
@@ -21,7 +21,8 @@ const BabySiterUpdate = () => {
             name: user.name,
             address: user.address,
             email: user.email,
-            imageURL: user.imageURL
+            imageURL: user.imageURL,
+            qualification: user.qualification
         }
         console.log(eventData);
 
@@ -39,7 +40,8 @@ const BabySiterUpdate = () => {
             if(data.acknowledged){
                 alert('User updated successfully');
                 event.target.reset();
-                window.history.push('/dashboard/babysiter');
+                // window.history.pushState('/dashboard/babysiter');
+                window.location.href = '/dashboard/babysiter'
             }
         })
     }
@@ -55,12 +57,12 @@ const BabySiterUpdate = () => {
     }
     return (
         <div>
-             <Maindashboard></Maindashboard><span style={{display:'block', height:'82px', width:'1090px', backgroundColor:'ghostwhite',marginLeft:'256px'}}></span>
+             <Maindashboard></Maindashboard> <span style={{display:'block', height:'60px', width:'1100px', backgroundColor:'ghostwhite',marginLeft:'256px'}}></span>
             <div className="container rightMainD" style={{
                 width: '1000px', marginRight: '1px',
                 marginLeft: '280px', marginTop: '15px'
             }}>
-                <h2>Update BabySiter</h2>
+                <h2>Update BabySiter: </h2>
                   <form onSubmit={handleUpdateUser}>
                                 <input className="form-control" onBlur={handleInputBlur} defaultValue={name} type="text" name='name' placeholder='name' />
                                 <br />
@@ -68,9 +70,11 @@ const BabySiterUpdate = () => {
                                 <br />
                                 <input className="form-control" onBlur={handleInputBlur} defaultValue={email} type="email" name='email' id="" placeholder='email' />
                                 <br />
-
+                                <input className="form-control" onBlur={handleInputBlur} type="text" defaultValue={qualification} name='qualification' id="" placeholder='qualification'/>
+                                <br />
                                 <input className="form-control" onBlur={handleInputBlur} type="text" defaultValue={imageURL} name='imageURL' id="" placeholder='imageURL'/>
                                 <br />
+                                
                                 <button className='btn btn-warning mt-3' type="submit">Update User</button>
                             </form>
 
