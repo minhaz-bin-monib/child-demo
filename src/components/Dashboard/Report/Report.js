@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import axios from 'axios';
+import { saveAs } from 'file-saver';
 import { Table } from "react-bootstrap";
 import { Link, useLoaderData } from "react-router-dom";
 import Maindashboard from "../MainDashboard/Maindashboard";
@@ -6,7 +8,7 @@ import Maindashboard from "../MainDashboard/Maindashboard";
 const Report = () => {
   const users = useLoaderData();
   const [isShowReport, setIsShowReport] = useState(false);
-  const [displayUsers, setDisplayUsers] = useState(users);
+  const [enrolemnt, setenrolemnt] = useState(users);
   const [reportData, setReportData] = useState({});
 
   const handleAddEnrollment = (event) => {
@@ -51,9 +53,35 @@ const Report = () => {
   });
   
     console.log(result);
-    setDisplayUsers(result);
+    setenrolemnt(result);
     setIsShowReport(true);
+    
   };
+
+  // report print 
+
+  const createAndDownloadPdf = () => {
+    axios.post('http://localhost:5000/create-pdf', enrolemnt)
+      .then(() => axios.get('http://localhost:5000/fetch-pdf', { responseType: 'blob' }))
+      .then((res) => {
+        const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
+        console.log(pdfBlob);
+        saveAs(pdfBlob, 'newPdf.pdf');
+      })
+  }
+  const createAndOpenPdf = () => {
+    axios.post('http://localhost:5000/create-pdf', enrolemnt)
+      .then(() => axios.get('http://localhost:5000/fetch-pdf', { responseType: 'blob' }))
+      .then((res) => {
+        const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
+       // Create a URL for the Blob
+      const pdfUrl = URL.createObjectURL(pdfBlob);
+
+      // Open the PDF in a new tab
+      const newTab = window.open();
+      newTab.location.href = pdfUrl;
+      })
+  }
 
   const handleServiceBlur = (event) => {
     const value = event.target.value;
@@ -128,9 +156,16 @@ const Report = () => {
             
           </div>
          
-          
+         
         </form>
-
+        {isShowReport &&  <div className="row mb-2">
+            <div className="d-flex justify-content-end">
+              <button className="btn btn-sm btn-success mx-2" onClick={createAndOpenPdf}>Open to Pdf</button>
+              <button className="btn btn-sm btn-success" onClick={createAndDownloadPdf}>Download Pdf</button>
+            </div>
+          </div>
+        } 
+       
         {isShowReport && (
           <Table striped bordered hover>
             <thead>
@@ -144,7 +179,7 @@ const Report = () => {
               </tr>
             </thead>
             <tbody>
-              {displayUsers.map((user) => (
+              {enrolemnt.map((user) => (
                 <tr>
                   <td>{user._id}</td>
                   <td>{user.name}</td>
