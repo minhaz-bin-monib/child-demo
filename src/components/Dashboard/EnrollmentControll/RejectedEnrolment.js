@@ -20,7 +20,7 @@ const RejectedEnrolment = () => {
         }}>
             {/* Loop on data  */}
             <h3 className='text-center'>Rejected Enrolments</h3>
-            <Table striped bordered hover>
+            <Table style={{fontSize:'14px'}} striped bordered hover>
                 <thead>
                     <tr>
 

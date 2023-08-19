@@ -32,7 +32,7 @@ const BabySiterDelete = () => {
 
     return (
         <div>
-             <Maindashboard></Maindashboard> <span style={{display:'block', height:'82px', width:'1090px', backgroundColor:'ghostwhite',marginLeft:'256px'}}></span>
+             <Maindashboard></Maindashboard> <span style={{display:'block', height:'60px', width:'1100px', backgroundColor:'ghostwhite',marginLeft:'256px'}}></span>
             <div className="container rightMainD" style={{
                 width: '1000px', marginRight: '1px',
                 marginLeft: '280px', marginTop: '15px'

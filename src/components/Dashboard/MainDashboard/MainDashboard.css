@@ -37,7 +37,7 @@
     display: block;
     height: 1px;
     width: 100%;
-    background: #dbd1d1;
+    /* background: #dbd1d1; */
     margin: auto;
     margin-top: 20px;
     
@@ -56,6 +56,11 @@
     padding: 10px 0;
     align-items: center;
 }
+
+.dashboard_main_div ul li:hover{
+  background-color: #dae0e5;
+}
+
 .dashboard_main_div ul li a{
     text-decoration: none;
     color: #003655;
@@ -69,7 +74,7 @@
     margin: 0;
     padding-left: 15px;
     font-weight: 600;
-    text-decoration: underline;
+    height: 20px;
     color: #003655;
 }
 

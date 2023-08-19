@@ -41,6 +41,7 @@ import Report from "./components/Dashboard/Report/Report";
 import ReadEnquiry from "./components/Dashboard/Enquiry/ReadEnquiry/ReadEnquiry";
 import UnreadEnquiry from "./components/Dashboard/Enquiry/UnreadEnquiry/UnreadEnquiry";
 import UnreadEnquiryDetails from "./components/Dashboard/Enquiry/UnreadEnquiry/UnreadEnquiryDetails";
+import SubscribeControll from "./components/Dashboard/SubscribeControll/SubscribeControll";
 
 const router = createBrowserRouter([
   {
@@ -89,7 +90,7 @@ const router = createBrowserRouter([
       // ************************* DashBoard ************************************
       {
         path : '/dashboard',
-        element : <AdminMainPanel></AdminMainPanel>,
+        element : <PrivateRoute><AdminMainPanel></AdminMainPanel></PrivateRoute>,
         loader: () => fetch('http://localhost:5000/users'),
 
       },
@@ -221,7 +222,13 @@ const router = createBrowserRouter([
         path : '/dashboard/unreadEnquiryDetails/:id',
         element : <UnreadEnquiryDetails></UnreadEnquiryDetails>,
         loader: ({params}) => fetch(`http://localhost:5000/unreadEnquiry/${params.id}`)
+      },
+      {
+        path : '/dashboard/subscribeControll',
+        element : <SubscribeControll></SubscribeControll>,
+        loader: () => fetch('http://localhost:5000/subscribers')
       }
+
 
 
       

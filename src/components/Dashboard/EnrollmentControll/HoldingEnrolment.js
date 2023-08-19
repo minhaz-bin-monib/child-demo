@@ -20,7 +20,7 @@ const HoldingEnrolment = () => {
         }}>
             {/* Loop on data  */}
             <h3 className='text-center'>Onboard Enrolments</h3>
-            <Table striped bordered hover>
+            <Table style={{fontSize:'14px'}} striped bordered hover>
                 <thead>
                     <tr>
 
