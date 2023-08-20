@@ -1,0 +1,136 @@
+[
+    {
+        "title": "Dashborad",
+        "icon": "bi bi-speedometer2",
+        "path": "/dashboard"
+
+        
+    },
+    {
+        "title": "Services",
+        "icon": "bi-bookmark-fill",
+        "childrens": [
+            {
+                "title": "Add",
+                "icon": "bi-circle",
+                "path": "/dashboard/addService"
+            },
+            {
+                "title": "Manage",
+                "icon": "bi-circle",
+                "path": ""
+            }
+        ]
+    },
+    {
+        "title": "Baby sitter",
+        "icon": "bi-person-add",
+        "childrens": [
+            {
+                "title": "Add Babysitter",
+                "icon": "bi-circle",
+                "path": "/dashboard/createbabysiter"
+            },
+            {
+                "title": "Manage Babysitter",
+                "icon": "bi-circle",
+                "path": "/dashboard/babysiter"
+            }
+        ]
+    },
+    {
+        "title": "Enquiry",
+        "icon": "bi-question-circle-fill",
+        "childrens": [
+            {
+                "title": "Unread Enquiry",
+                "icon": "bi-circle",
+                "path": "/dashboard/unreadEnquiry"
+            },
+            {
+                "title": "Read Enquiry",
+                "icon": "bi-circle",
+                "path": ""
+            }
+        ]
+    },
+    {
+        "title": "Subscriber",
+        "icon": "bi-people-fill",
+        "path": "/dashboard/subscribeControll"
+    },
+    {
+        "title": "Enrollment",
+        "icon": "bi-border-all",
+        "childrens": [
+            {
+                "title": "All Enrollment",
+                "icon": "bi-circle",
+                "path": ""
+            },
+            {
+                "title": "New Enrollment",
+                "icon": "bi-circle",
+                "path": "/dashboard/newEnrolment"
+            },
+            {
+                "title": "Accepted Enrollment",
+                "icon": "bi-circle",
+                "path": "/dashboard/acceptedenrolment"
+            },
+            {
+                "title": "Onboard Enrollment",
+                "icon": "bi-circle",
+                "path": "/dashboard/onboardenrolment"
+            },
+            {
+                "title": "Rejected Enrollment",
+                "icon": "bi-circle",
+                "path": "/dashboard/rejectedenrolment"
+            }
+        ]
+    },
+    {
+        "title": "Report",
+        "icon": "bi-book-fill",
+        "childrens": [
+            {
+                "title": "D/W Report",
+                "icon": "bi-circle",
+                "path": "/dashboard/report"
+            }
+        ]
+    },
+    {
+        "title": "Pages",
+        "icon": "bi-book-fill",
+        "childrens": [
+            {
+                "title": "About Us",
+                "icon": "bi-journal",
+                "path": ""
+            },
+            {
+                "title": "Contact Us",
+                "icon": "bi-person-rolodex",
+                "path": ""
+            }
+        ]
+    },
+    {
+        "title": "Account",
+        "icon": "bi-person-fill-gear",
+        "childrens": [
+            {
+                "title": "Profile",
+                "icon": "bi-person",
+                "path": ""
+            },
+            {
+                "title": "Logout",
+                "icon": "bi-box-arrow-right",
+                "path": "/"
+            }
+        ]
+    }
+]

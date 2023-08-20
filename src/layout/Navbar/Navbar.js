@@ -79,7 +79,7 @@ const Navbar = () => {
 
                             </ul>
 
-                            {/* <div>
+                            <div>
                                 <form className="d-flex">
 
 
@@ -88,7 +88,7 @@ const Navbar = () => {
                                         <>
                                             <button onClick={logOut} className='btn btn-danger'><Link style={{ color: "white" }} className='main-text-style' to='/main'>Logout</Link></button>
                                             <div>
-            <Link to='/dashboard'><p className='admin_style'><span className='font-style'>Admin</span></p></Link>
+            {/* <Link to='/dashboard'><p className='admin_style'><span className='font-style'>Admin</span></p></Link> */}
         </div>
                                         </>
 
@@ -98,7 +98,7 @@ const Navbar = () => {
 
 
                                     }
-                                    {
+                                    {/* {
 
                                         user?.uid === "qyy039iXPlUlcfGTcZa9p4jKarq2" ?
                                             <>
@@ -109,13 +109,13 @@ const Navbar = () => {
                                             :
                                             <span></span>
 
-                                    }
+                                    } */}
 
 
 
 
                                 </form>
-                            </div> */}
+                            </div>
 
                         </div>
                     </div>
