@@ -66,7 +66,7 @@
             {
                 "title": "All Enrollment",
                 "icon": "bi-circle",
-                "path": ""
+                "path": "/dashboard/allenrolment"
             },
             {
                 "title": "New Enrollment",
@@ -103,7 +103,7 @@
     },
     {
         "title": "Pages",
-        "icon": "bi-book-fill",
+        "icon": "bi-file-earmark-fill",
         "childrens": [
             {
                 "title": "About Us",
