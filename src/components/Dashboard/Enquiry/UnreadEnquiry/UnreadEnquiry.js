@@ -54,7 +54,7 @@ const UnreadEnquiry = () => {
             <Table style={{fontSize:'14px'}} striped bordered hover>
                 <thead>
                     <tr>
-
+                        <th>Sl no.</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Enquiry Date</th>
@@ -69,8 +69,9 @@ const UnreadEnquiry = () => {
 
                     {
                         enquiry.map(
-                            enqer =>
+                            (enqer,index) =>
                                 <tr>
+                                    <td>{index+1}</td>
                                     <td>{enqer.first_name} {enqer.last_name}</td>
                                     <td>{enqer.email}</td>
                                     <td>{enqer.currentDate}</td>
@@ -82,7 +83,7 @@ const UnreadEnquiry = () => {
                                         {/* <Link className='' to={`/dashboard/unreadEnquiryDetails/${enqer._id}`}><AiOutlineEye></AiOutlineEye></Link> */}
 
 
-                                        <Button variant="danger" onClick={() => handleDelete(enqer._id)}>Delete</Button>
+                                        <Button onClick={() => handleDelete(enqer._id)}><i class="bi bi-eye-fill"></i></Button>
 
 
                                     </td>

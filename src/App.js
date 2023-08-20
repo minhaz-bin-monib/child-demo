@@ -125,7 +125,7 @@ const router = createBrowserRouter([
 
        // ********************* START Enrolment ***********************
        {
-        path : '/dashboard/enrolment',
+        path : '/dashboard/newEnrolment',
         element : <NewEnrollementContoll></NewEnrollementContoll>,
         loader: () => fetch('http://localhost:5000/enrollment')
       },
@@ -158,6 +158,7 @@ const router = createBrowserRouter([
       },
        
        // ********************* EDN Enrolment ***********************
+
        // ************************* Report ***********************
        {
         path : '/dashboard/report',
@@ -206,14 +207,22 @@ const router = createBrowserRouter([
         path : '/events',
         element : <PrivateRoute><Events></Events></PrivateRoute>
       },
+             // ************************* Services Start***********************
+
       {
         path : '/dashboard/addService',
         element : <AddService></AddService>
       },
+             // ************************* Services Start***********************
+
       {
         path : '/enroll',
         element : <Enrollment></Enrollment>
       },
+
+
+        // ************************* Enquiry Start***********************
+
       {
         path : '/dashboard/readEnquiry',
         element : <ReadEnquiry></ReadEnquiry>,
@@ -229,12 +238,17 @@ const router = createBrowserRouter([
         element : <UnreadEnquiryDetails></UnreadEnquiryDetails>,
         loader: ({params}) => fetch(`http://localhost:5000/unreadEnquiry/${params.id}`)
       },
+       // ************************* Enquiry End ***********************
+
+
+      // ************************* Subscribe controll Start***********************
+
       {
         path : '/dashboard/subscribeControll',
         element : <SubscribeControll></SubscribeControll>,
         loader: () => fetch('http://localhost:5000/subscribers')
       }
-
+      // ************************* Subscribe controll End***********************
 
 
       

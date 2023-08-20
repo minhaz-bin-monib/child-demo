@@ -56,7 +56,7 @@ const LoginBootstrap = ({children}) => {
                 <input type="password" name='password' className="form-control" id="formGroupExampleInput2" placeholder="Your Password" required />
                 
             </div> 
-            {success && <Navigate to="/main"></Navigate> }
+            {success && <Navigate to="/dashboard"></Navigate> }
             {/* {!success && <p className='text-danger'>Password is wrong</p> } */}
             
             <button className='btn btn-primary' type='submit'>Login</button>

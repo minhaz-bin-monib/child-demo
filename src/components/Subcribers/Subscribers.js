@@ -60,7 +60,7 @@ const Subscribers = () => {
         <div>
             <section className="container">
                 <div className="row">
-                    <Maindashboard></Maindashboard>
+                    
 
                     <h1 className='text-center'>Join Our News Letter</h1>
                     <form onSubmit={handleAddSubscribe} className='form_control w-50 ms-5'>
