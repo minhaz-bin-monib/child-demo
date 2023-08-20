@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import Maindashboard from '../MainDashboard/Maindashboard';
 
-const EnrollmentControll = () => {
+const NewEnrollmentControll = () => {
 
     const users = useLoaderData().filter(f => f.status === 'New');
     const [displayUsers, setDisplayUsers] = useState(users);
@@ -69,4 +69,4 @@ const EnrollmentControll = () => {
     );
 };
 
-export default EnrollmentControll;
+export default NewEnrollmentControll;

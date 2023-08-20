@@ -13,27 +13,35 @@ const UnreadEnquiry = () => {
 
 
 
-    const handleDelete = id => {
+    const handleUpdate = id => {
 
-        const agree = window.confirm(`Are you sure you want to delete`);
-
-        if (agree) {
-            // console.log('deleting user with id: ', user._id);
-
-            fetch(`http://localhost:5000/enquiry/${id}`, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    //console.log(data)
-                    if (data.deletedCount > 0) {
-                        alert('deleted successfully.');
-                        // const remainingUsers = displayUsers.filter(usr => usr._id !== user._id);
-                        // setDisplayUsers(remainingUsers);
-                    }
-
-                });
+        const newStatus ={
+        
         }
+
+        // if (agree) {
+        //     // console.log('deleting user with id: ', user._id);
+
+        //     fetch(`http://localhost:5000/enquiry/${id}`, {
+        //         method: 'DELETE'
+        //     })
+        //         .then(res => res.json())
+        //         .then(data => {
+        //             //console.log(data)
+        //             if (data.deletedCount > 0) {
+        //                 alert('deleted successfully.');
+        //                 // const remainingUsers = displayUsers.filter(usr => usr._id !== user._id);
+        //                 // setDisplayUsers(remainingUsers);
+        //             }
+
+        //         });
+        // }
+    }
+
+
+
+    const handleStatus = () =>{
+
     }
     return (
         <div>
@@ -83,7 +91,7 @@ const UnreadEnquiry = () => {
                                         {/* <Link className='' to={`/dashboard/unreadEnquiryDetails/${enqer._id}`}><AiOutlineEye></AiOutlineEye></Link> */}
 
 
-                                        <Button onClick={() => handleDelete(enqer._id)}><i class="bi bi-eye-fill"></i></Button>
+                                        {/* <Link to="/dashboard/unreadEnquiry" onClick={() => handleStatus("old"),handleUpdate(enqer._id) }><i class="bi bi-eye-fill"></i></Link> */}
 
 
                                     </td>
