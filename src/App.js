@@ -43,6 +43,7 @@ import UnreadEnquiry from "./components/Dashboard/Enquiry/UnreadEnquiry/UnreadEn
 import UnreadEnquiryDetails from "./components/Dashboard/Enquiry/UnreadEnquiry/UnreadEnquiryDetails";
 import SubscribeControll from "./components/Dashboard/SubscribeControll/SubscribeControll";
 import AllEnrolment from "./components/Dashboard/EnrollmentControll/AllEnrolment";
+import SearchReport from "./components/Dashboard/Report/SearchReport";
 
 const router = createBrowserRouter([
   {
@@ -159,12 +160,25 @@ const router = createBrowserRouter([
        
        // ********************* EDN Enrolment ***********************
 
-       // ************************* Report ***********************
+       // *************************  ***********************
        {
         path : '/dashboard/report',
         element : <Report></Report>,
         loader: () => fetch('http://localhost:5000/enrollment')
       },
+
+      {
+        path : '/dashboard/reportSearch',
+        element : <SearchReport></SearchReport>,
+        loader: () => fetch('http://localhost:5000/enrollment')
+      },
+
+
+
+
+
+      
+       // ************************* Report End***********************
       {
         path : '/payment',
         element : <Payment></Payment>

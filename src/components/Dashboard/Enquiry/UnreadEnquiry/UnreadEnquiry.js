@@ -28,7 +28,7 @@ const UnreadEnquiry = () => {
         .then(res => res.json())
         .then(data => {
             if(data.acknowledged){
-                alert('User updated successfully');
+                // alert('User updated successfully');
                // event.target.reset();
              
             //    window.location.href = '/dashboard'

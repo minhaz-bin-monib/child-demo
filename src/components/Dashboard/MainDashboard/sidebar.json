@@ -98,6 +98,11 @@
                 "title": "D/W Report",
                 "icon": "bi-circle",
                 "path": "/dashboard/report"
+            },
+            {
+                "title": "Search",
+                "icon": "bi-circle",
+                "path": "/dashboard/reportSearch"
             }
         ]
     },
