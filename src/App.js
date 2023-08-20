@@ -42,6 +42,7 @@ import ReadEnquiry from "./components/Dashboard/Enquiry/ReadEnquiry/ReadEnquiry"
 import UnreadEnquiry from "./components/Dashboard/Enquiry/UnreadEnquiry/UnreadEnquiry";
 import UnreadEnquiryDetails from "./components/Dashboard/Enquiry/UnreadEnquiry/UnreadEnquiryDetails";
 import SubscribeControll from "./components/Dashboard/SubscribeControll/SubscribeControll";
+import AllEnrolment from "./components/Dashboard/EnrollmentControll/AllEnrolment";
 
 const router = createBrowserRouter([
   {
@@ -130,7 +131,7 @@ const router = createBrowserRouter([
       },
       {
         path : '/dashboard/allenrolment',
-        element : <AcceptedEnrolment></AcceptedEnrolment>,
+        element : <AllEnrolment></AllEnrolment>,
         loader: () => fetch('http://localhost:5000/enrollment')
       },
       {
