@@ -236,8 +236,9 @@ const router = createBrowserRouter([
       {
         path : '/dashboard/unreadEnquiryDetails/:id',
         element : <UnreadEnquiryDetails></UnreadEnquiryDetails>,
-        loader: ({params}) => fetch(`http://localhost:5000/unreadEnquiry/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:5000/enquiry/${params.id}`)
       },
+     
        // ************************* Enquiry End ***********************
 
 

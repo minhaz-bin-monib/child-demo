@@ -50,7 +50,7 @@
             {
                 "title": "Read Enquiry",
                 "icon": "bi-circle",
-                "path": ""
+                "path": "/dashboard/readEnquiry"
             }
         ]
     },

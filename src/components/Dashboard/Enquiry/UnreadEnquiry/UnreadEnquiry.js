@@ -13,36 +13,32 @@ const UnreadEnquiry = () => {
 
 
 
-    const handleUpdate = id => {
+    const handleUpdate = (id) => {
 
         const newStatus ={
-        
+            status: 'old'
         }
-
-        // if (agree) {
-        //     // console.log('deleting user with id: ', user._id);
-
-        //     fetch(`http://localhost:5000/enquiry/${id}`, {
-        //         method: 'DELETE'
-        //     })
-        //         .then(res => res.json())
-        //         .then(data => {
-        //             //console.log(data)
-        //             if (data.deletedCount > 0) {
-        //                 alert('deleted successfully.');
-        //                 // const remainingUsers = displayUsers.filter(usr => usr._id !== user._id);
-        //                 // setDisplayUsers(remainingUsers);
-        //             }
-
-        //         });
-        // }
+        fetch(`http://localhost:5000/enquiry/${id}`,{
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newStatus)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.acknowledged){
+                alert('User updated successfully');
+               // event.target.reset();
+             
+            //    window.location.href = '/dashboard'
+               
+            }
+        })
+      
     }
 
-
-
-    const handleStatus = () =>{
-
-    }
+   
     return (
         <div>
             <Maindashboard></Maindashboard> <span style={{ display: 'block', height: '60px', width: '1100px', backgroundColor: 'ghostwhite', marginLeft: '256px' }}></span>
@@ -91,7 +87,7 @@ const UnreadEnquiry = () => {
                                         {/* <Link className='' to={`/dashboard/unreadEnquiryDetails/${enqer._id}`}><AiOutlineEye></AiOutlineEye></Link> */}
 
 
-                                        {/* <Link to="/dashboard/unreadEnquiry" onClick={() => handleStatus("old"),handleUpdate(enqer._id) }><i class="bi bi-eye-fill"></i></Link> */}
+                                        <Link to={`/dashboard/unreadEnquiryDetails/${enqer._id}`} onClick={() => handleUpdate(enqer._id) }><i class="bi bi-eye-fill"></i></Link>
 
 
                                     </td>
