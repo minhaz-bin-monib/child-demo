@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.add_babysitter_main_section{
+
+}
+
+.add_babysitter_main_div{
+    padding-top: 85px !important;
+    padding-left: 167px !important;
+}
+
+.add_babysitter_form{
+    width: 100% !important;
+}
+
+.first_col{
+    background: #FFFFFF;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+    padding-top: 10px !important;
+
+}
+.second_col{
+    background: #FFFFFF;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+    padding-top: 10px;
+    margin-left: 50px;
+
+}

@@ -1,6 +1,18 @@
 .form_control{
-    padding-left: 500px;
-    padding-top: 100px;
+    padding-left: 25px;
+    padding-right: 125px;
+    /* box shadow css */
+    background: #FFFFFF;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+     /* box shadow css */
+
+    margin-top: 100px;
+    padding-bottom: 25px;
+    margin-left: 50px;
+}
+.form_control h2{
+    padding-top: 20px;
 }
 
 form{

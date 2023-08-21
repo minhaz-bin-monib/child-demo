@@ -33,10 +33,10 @@ const EditEnrolementStatus = () => {
         .then(res => res.json())
         .then(data => {
             if(data.acknowledged){
-                alert('User updated successfully');
+                alert('Enrollment Status updated successfully');
                 event.target.reset();
              
-               window.location.href = '/dashboard'
+               window.location.href = '/dashboard/allSection'
                
             }
         })
@@ -57,13 +57,13 @@ const EditEnrolementStatus = () => {
    
     return (
         <div>
-        <Maindashboard></Maindashboard> <span style={{display:'block', height:'60px', width:'1100px', backgroundColor:'ghostwhite',marginLeft:'256px'}}></span>
+        <Maindashboard></Maindashboard> <span className='dashboard_nav'></span>
         <div className="container rightMainD" style={{
             width: '1000px', marginRight: '1px',
             marginLeft: '280px', marginTop: '15px'
         }}>
             {/* Loop on data  */}
-            <h3 className='text-center'>New Enrolment</h3>
+            <h3 className='text-center'>Edit Enrolment Status</h3>
            
             
             <section className="container">

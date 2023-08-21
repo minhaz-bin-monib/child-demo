@@ -62,8 +62,11 @@ const DeleteNurse = () => {
                                         <Card.Body className='text-center'>
                                             <Card.Title>Nurse Name:  {user.name}</Card.Title>
                                             <Card.Text>
-                                                She is a top class nurse from our Day Care. 
-                                                <p><b>Nurse Email: {user.email}</b></p>
+                                                 
+                                                <p><b>Email: {user.email}</b></p>
+                                                <p><b>Email: {user.number}</b></p>
+
+
                                             </Card.Text>
                                             <Button variant="danger" onClick={() => handleDelete(user)}>Delete</Button>
                                         </Card.Body>

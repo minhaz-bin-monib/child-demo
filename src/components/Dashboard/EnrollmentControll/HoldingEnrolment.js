@@ -13,25 +13,24 @@ const HoldingEnrolment = () => {
 
     return (
         <div>
-        <Maindashboard></Maindashboard> <span style={{display:'block', height:'82px', width:'1090px', backgroundColor:'ghostwhite',marginLeft:'256px'}}></span>
+        <Maindashboard></Maindashboard> <span className='dashboard_nav'></span>
         <div className="container rightMainD" style={{
             width: '1000px', marginRight: '1px',
             marginLeft: '280px', marginTop: '15px'
         }}>
             {/* Loop on data  */}
-            <h3 className='text-center'>Onboard Enrolments</h3>
+            <h3 className='text-center'>Onhold Enrolments</h3>
             <Table style={{fontSize:'14px'}} striped bordered hover>
                 <thead>
                     <tr>
-
+                    <th>Sl no.</th>
                     <th>Enroll Id</th>
-                    <th>Parent</th>
-                        <th>program</th>
-                        <th>Address</th>
-                        <th>Phone</th>
-                        <th>Email</th>
-                        <th>Status</th>
-                        <th>Action</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Contact Number</th>
+                    <th>Status</th>
+                    <th>Enrollment Date</th>
+                    <th>Action</th>
 
                     </tr>
                 </thead>
@@ -40,20 +39,20 @@ const HoldingEnrolment = () => {
 
                     {
                         displayUsers.map(
-                            user =>
+                            (user, index) =>
                                 <tr>
+                                    <td>{index+1}</td>
                                      <td>{user._id}</td>
-                                    <td>{user.name}</td>
-                                    <td>{user.program}</td>
-                                    <td>{user.address}</td>
-                                    <td>{user.mobile1}</td>
+                                    <td>{user.childName}</td>
                                     <td>{user.email}</td>
-                                   
+                                    <td>{user.mobile1}</td>
                                     <td>{user.status}</td>
+                                    <td>{user.currentDate}</td>
+                                   
                                     <td>
                                         {/* Id Pass */}
-                                        <Link className='btn btn-sm btn-primary' to={`/dashboard/editenrolment/${user._id}`}>Update Status</Link>
-
+                                        <Link className='btn btn-sm btn-primary' to={`/dashboard/editenrolment/${user._id}`} ><i class="bi bi-eye-fill"></i></Link>
+                                   
                                     </td>
                                 </tr>
                         )

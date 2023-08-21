@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.manage_service_main_div{
+    
+   
+    padding-left: 95px !important;
+    padding-top: 102px;
+}
+.manage_service_main_div h2{
+ padding-bottom: 20px;
+}
+
+.manage_service_table{
+    font-size: 14px;
+    width: 90% !important;
+}

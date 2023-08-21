@@ -18,7 +18,6 @@ const Subscribers = () => {
 
         // This arrangement can be altered based on how we want the date's format to appear.
         let currentDate = `${day}-${month}-${year}`;
-        console.log(currentDate); // "17-6-2022"
 
         const eventData = {
             subscribe_email: subcribe.subscribe_email,

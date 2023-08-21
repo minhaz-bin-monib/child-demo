@@ -1,10 +1,14 @@
 [
     {
-        "title": "Dashborad",
+        "title": "Dashboard",
         "icon": "bi bi-speedometer2",
-        "path": "/dashboard"
-
-        
+        "childrens": [
+            {
+                "title": "All Section",
+                "icon": "bi-circle",
+                "path": "/dashboard/allSection"
+            }
+        ]
     },
     {
         "title": "Services",
@@ -18,7 +22,7 @@
             {
                 "title": "Manage",
                 "icon": "bi-circle",
-                "path": ""
+                "path": "/dashboard/manageService"
             }
         ]
     },
@@ -55,9 +59,15 @@
         ]
     },
     {
-        "title": "Subscriber",
+        "title": "Subscribes",
         "icon": "bi-people-fill",
-        "path": "/dashboard/subscribeControll"
+        "childrens": [
+            {
+                "title": "All Subscribers",
+                "icon": "bi-circle",
+                "path": "/dashboard/subscribeControll"
+            }
+        ]
     },
     {
         "title": "Enrollment",
@@ -74,17 +84,17 @@
                 "path": "/dashboard/newEnrolment"
             },
             {
-                "title": "Accepted Enrollment",
+                "title": "Accepted Enroll",
                 "icon": "bi-circle",
                 "path": "/dashboard/acceptedenrolment"
             },
             {
-                "title": "Onboard Enrollment",
+                "title": "Onhold Enroll",
                 "icon": "bi-circle",
                 "path": "/dashboard/onboardenrolment"
             },
             {
-                "title": "Rejected Enrollment",
+                "title": "Rejected Enroll",
                 "icon": "bi-circle",
                 "path": "/dashboard/rejectedenrolment"
             }

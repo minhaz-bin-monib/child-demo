@@ -11,7 +11,8 @@ const SubscribeControll = () => {
 
     return (
         <div>
-            <Maindashboard></Maindashboard> <span style={{ display: 'block', height: '60px', width: '1100px', backgroundColor: 'ghostwhite', marginLeft: '256px' }}></span>
+            <Maindashboard></Maindashboard> <span className='dashboard_nav'></span>
+
             <div className="container rightMainD" style={{
                 width: '1000px', marginRight: '1px',
                 marginLeft: '280px', marginTop: '15px'
@@ -21,7 +22,7 @@ const SubscribeControll = () => {
                 <Table striped bordered hover>
                     <thead>
                         <tr>
-
+                            <th>Sl no.</th>
                             <th>Email</th>
                             <th>Date</th>
 
@@ -32,11 +33,11 @@ const SubscribeControll = () => {
 
                         {
                             subscribers.map(
-                                user =>
+                                (user, index) =>
 
 
                                     <tr>
-
+                                        <td>{index+1}</td>
                                         <td>{user.subscribe_email}</td>
                                         <td>{user.currentDate}</td>
 

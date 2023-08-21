@@ -44,6 +44,7 @@ import UnreadEnquiryDetails from "./components/Dashboard/Enquiry/UnreadEnquiry/U
 import SubscribeControll from "./components/Dashboard/SubscribeControll/SubscribeControll";
 import AllEnrolment from "./components/Dashboard/EnrollmentControll/AllEnrolment";
 import SearchReport from "./components/Dashboard/Report/SearchReport";
+import ManageService from "./components/Dashboard/ServiceControls/ManageService/ManageService";
 
 const router = createBrowserRouter([
   {
@@ -93,6 +94,12 @@ const router = createBrowserRouter([
       {
         path : '/dashboard',
         element : <PrivateRoute><AdminMainPanel></AdminMainPanel></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/users'),
+
+      },
+      {
+        path : '/dashboard/allSection',
+        element : <AdminMainPanel></AdminMainPanel>,
         loader: () => fetch('http://localhost:5000/users'),
 
       },
@@ -160,7 +167,7 @@ const router = createBrowserRouter([
        
        // ********************* EDN Enrolment ***********************
 
-       // *************************  ***********************
+       // *************************Report Start  ***********************
        {
         path : '/dashboard/report',
         element : <Report></Report>,
@@ -227,7 +234,13 @@ const router = createBrowserRouter([
         path : '/dashboard/addService',
         element : <AddService></AddService>
       },
-             // ************************* Services Start***********************
+      {
+        path : '/dashboard/manageService',
+        element : <ManageService></ManageService>,
+        loader: () => fetch('http://localhost:5000/services')
+
+      },
+             // ************************* Services End***********************
 
       {
         path : '/enroll',
