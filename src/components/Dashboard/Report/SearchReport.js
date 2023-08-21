@@ -61,7 +61,7 @@ const SearchReport = () => {
     };
     return (
         <div>
-      <Maindashboard></Maindashboard><span style={{display:'block', height:'82px', width:'1090px', backgroundColor:'ghostwhite',marginLeft:'256px'}}></span>
+      <Maindashboard></Maindashboard><span className='dashboard_nav'></span>
       <div
         className="container rightMainD"
         style={{
@@ -73,7 +73,7 @@ const SearchReport = () => {
       >
         {/* Loop on data  */}
         <h5 className="text-center">Search Result</h5>
-        <form onSubmit={handleAddEnrollment} className="mb-3">
+        <form onSubmit={handleAddEnrollment} className="mb-5" >
          
           <div className="row">
             <div className="from-control col-12 mb-3">

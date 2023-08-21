@@ -123,12 +123,12 @@
             {
                 "title": "About Us",
                 "icon": "bi-journal",
-                "path": ""
+                "path": "/dashboard/aboutUsControll"
             },
             {
                 "title": "Contact Us",
                 "icon": "bi-person-rolodex",
-                "path": ""
+                "path": "/dashboard/contactUsControll"
             }
         ]
     },

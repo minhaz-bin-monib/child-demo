@@ -45,6 +45,9 @@ import SubscribeControll from "./components/Dashboard/SubscribeControll/Subscrib
 import AllEnrolment from "./components/Dashboard/EnrollmentControll/AllEnrolment";
 import SearchReport from "./components/Dashboard/Report/SearchReport";
 import ManageService from "./components/Dashboard/ServiceControls/ManageService/ManageService";
+import AboutUsControll from "./components/Dashboard/AboutUsControll/AboutUsControll";
+import AboutUs from "./components/AboutUs/AboutUs";
+import ContactUsControll from "./components/Dashboard/ContactUsControll/ContactUsControll";
 
 const router = createBrowserRouter([
   {
@@ -65,7 +68,9 @@ const router = createBrowserRouter([
       },
       {
         path : '/services',
-        element : <Services></Services>
+        element : <Services></Services>,
+        loader: () => fetch('http://localhost:5000/services')
+
       },
       {
         path : '/login',
@@ -275,8 +280,37 @@ const router = createBrowserRouter([
         path : '/dashboard/subscribeControll',
         element : <SubscribeControll></SubscribeControll>,
         loader: () => fetch('http://localhost:5000/subscribers')
-      }
+      },
       // ************************* Subscribe controll End***********************
+
+
+       // ************************* AboutUs controll Start***********************
+
+       {
+        path : '/dashboard/aboutUsControll',
+        element : <AboutUsControll></AboutUsControll>,
+        loader: () => fetch('http://localhost:5000/aboutUs')
+      },
+      // ************************* AboutUs controll End***********************
+
+       // ************************* contactUS controll Start***********************
+
+       {
+        path : '/dashboard/contactUsControll',
+        element : <ContactUsControll></ContactUsControll>
+      },
+      // ************************* contactUS controll End***********************
+
+
+
+      // ************************* AboutUs mainpage Start***********************
+
+      {
+        path : '/dashboard/aboutus',
+        element : <AboutUs></AboutUs>,
+        loader: () => fetch('http://localhost:5000/aboutUs')
+      }
+      // ************************* AboutUs mainpage End***********************
 
 
       

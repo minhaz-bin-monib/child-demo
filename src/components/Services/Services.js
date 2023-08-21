@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import Navbar from '../../layout/Navbar/Navbar';
 import Footer from '../../layout/Footer/Footer';
 import './Services.css'
+import { useLoaderData } from 'react-router-dom';
 
 const Services = () => {
 
-   
+    const services = useLoaderData();
+    const [service, setService] = useState(services);
 
     return (
 
@@ -14,13 +16,32 @@ const Services = () => {
 
 
 
-        
+
         <div>
             <Navbar></Navbar>
             <section className="main_section">
 
                 <div className="container">
                     <h2>Our Given Services</h2>
+
+                    <div className="row">
+                        {service.map(
+                            service =>
+                                <>
+                                <div className="col-md-6">
+                                    <img src="" alt="" />
+                                </div>
+                                <div className="col-md-6">
+                                    {service.service_name}
+                                    {service.service_details}
+                                </div></>
+                        )
+
+                        }
+                    </div>
+
+
+
 
                     {/* <div className="main_div">
                         <h3>Care of Children</h3>

@@ -95,7 +95,7 @@ const Report = () => {
 
   return (
     <div>
-      <Maindashboard></Maindashboard><span style={{display:'block', height:'82px', width:'1090px', backgroundColor:'ghostwhite',marginLeft:'256px'}}></span>
+      <Maindashboard></Maindashboard><span className='dashboard_nav'></span>
       <div
         className="container rightMainD"
         style={{
@@ -107,7 +107,7 @@ const Report = () => {
       >
         {/* Loop on data  */}
         <h3 className="text-center">Report Show</h3>
-        <form onSubmit={handleAddEnrollment} className="mb-3">
+        <form onSubmit={handleAddEnrollment} className="mb-3" style={{width:"100%"}}>
          
           <div className="row">
             <div className="from-control col-4 mb-3">
@@ -158,13 +158,7 @@ const Report = () => {
          
          
         </form>
-        {isShowReport &&  <div className="row mb-2">
-            <div className="d-flex justify-content-end">
-              <button className="btn btn-sm btn-success mx-2" onClick={createAndOpenPdf}>Open to Pdf</button>
-              <button className="btn btn-sm btn-success" onClick={createAndDownloadPdf}>Download Pdf</button>
-            </div>
-          </div>
-        } 
+        
        
         {isShowReport && (
           <Table striped bordered hover>
@@ -192,6 +186,13 @@ const Report = () => {
             </tbody>
           </Table>
         )}
+        {isShowReport &&  <div className="row mb-2">
+            <div className="d-flex justify-content-end">
+              <button className="btn btn-sm btn-success" style={{marginLeft:'44.5rem', marginRight:'0.5rem'}} onClick={createAndOpenPdf}>Open to Pdf</button>
+              <button className="btn btn-sm btn-success" onClick={createAndDownloadPdf}>Download Pdf</button>
+            </div>
+          </div>
+        } 
       </div>
     </div>
   );
