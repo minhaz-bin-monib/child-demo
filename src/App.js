@@ -48,6 +48,9 @@ import ManageService from "./components/Dashboard/ServiceControls/ManageService/
 import AboutUsControll from "./components/Dashboard/AboutUsControll/AboutUsControll";
 import AboutUs from "./components/AboutUs/AboutUs";
 import ContactUsControll from "./components/Dashboard/ContactUsControll/ContactUsControll";
+import ServiceUpdate from "./components/Dashboard/ServiceControls/ManageService/ServiceUpdate";
+import ContactUs from "./components/ContactUs/ContactUs";
+import Camera from "./components/Webcam/Camera";
 
 const router = createBrowserRouter([
   {
@@ -223,7 +226,7 @@ const router = createBrowserRouter([
       },
       {
         path : '/curriculum',
-        element : <PrivateRoute><Curriculum></Curriculum></PrivateRoute>
+        element : <Curriculum></Curriculum>
       },
       {
         path : '/admission',
@@ -231,9 +234,9 @@ const router = createBrowserRouter([
       },
       {
         path : '/events',
-        element : <PrivateRoute><Events></Events></PrivateRoute>
+        element : <Events></Events>
       },
-             // ************************* Services Start***********************
+             // ************************* Services controll Start***********************
 
       {
         path : '/dashboard/addService',
@@ -245,11 +248,28 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/services')
 
       },
-             // ************************* Services End***********************
+      {
+        path : '/dashboard/updateService/:id',
+        element : <ServiceUpdate></ServiceUpdate>,
+        loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`),
+        
+
+      },
+             // ************************* Services controll End***********************
 
       {
         path : '/enroll',
         element : <Enrollment></Enrollment>
+      },
+
+
+        // ************************* Enquiry Start***********************
+
+              // ************************* Services controll End***********************
+
+      {
+        path : '/camera',
+        element : <Camera></Camera>
       },
 
 
@@ -302,11 +322,20 @@ const router = createBrowserRouter([
       // ************************* contactUS controll End***********************
 
 
+      // ************************* contactUS main section Start***********************
+
+      {
+        path : '/contact',
+        element : <ContactUs></ContactUs>
+      },
+      // ************************* contactUS main section End***********************
+
+
 
       // ************************* AboutUs mainpage Start***********************
 
       {
-        path : '/dashboard/aboutus',
+        path : '/aboutus',
         element : <AboutUs></AboutUs>,
         loader: () => fetch('http://localhost:5000/aboutUs')
       }

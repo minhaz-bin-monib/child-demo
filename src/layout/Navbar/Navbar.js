@@ -30,23 +30,17 @@ const Navbar = () => {
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link" href='#' ><Link className='main-text-style' to='/allnurses'>Team</Link></a>
+                                    <a className="nav-link" href='#' ><Link className='main-text-style' to='/allnurses'>Babysitters</Link></a>
                                 </li>
 
-                                <li className="nav-item">
-                                    <a className="nav-link" href='#'><Link className='main-text-style' to='/programs'>Programs</Link></a>
-
-                                </li>
+                               
 
                                 <li className="nav-item">
                                     <a className="nav-link" href='#'><Link className='main-text-style' to='/events'>Events</Link></a>
 
                                 </li>
 
-                                <li className="nav-item">
-                                    <a className="nav-link" href='#'><Link className='main-text-style' to='/curriculum'>Curriculum</Link></a>
-
-                                </li>
+                               
                                 <li className="nav-item">
                                     <a className="nav-link" href='#'><Link className='main-text-style' to='/services'>Services</Link></a>
 
@@ -57,7 +51,11 @@ const Navbar = () => {
 
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" target='_blank' href='#'><Link className='main-text-style' to='/dashboard/aboutus'>About Us</Link></a>
+                                    <a className="nav-link" target='_blank' href='#'><Link className='main-text-style' to='/aboutus'>About Us</Link></a>
+
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" target='_blank' href='#'><Link className='main-text-style' to='/contact'>Contact Us</Link></a>
 
                                 </li>
                                 <li className="nav-item">

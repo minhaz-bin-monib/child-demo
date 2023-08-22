@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import Maindashboard from '../MainDashboard/Maindashboard';
 import "../Dashboard-nav.css";
 import "./AboutUsControll.css";
+import { useLoaderData } from 'react-router-dom';
 
 
 
 const AboutUsControll = () => {
 
-
+const abouts = useLoaderData();
+const {post_title, post_topic} = abouts;
+console.log(post_title);
 
     const [user, setUser] = useState({});
 
@@ -52,17 +55,6 @@ const AboutUsControll = () => {
         
     }
 
-
-
-
-
-
-
-
-
-
-
-
     return (
         <section className="about_us_main_section">
             <div className='row w-100'>
@@ -77,9 +69,9 @@ const AboutUsControll = () => {
                         
                     <form onSubmit={handleAddUser} className='form_control'>
                         <h2 className='mb-5 mt-3'>Add New Post </h2>
-                        <input className="form-control" onBlur={handleInputBlur} type="text" name='post_title' placeholder='Post Title' required />
+                        <input className="form-control" onBlur={handleInputBlur} type="text" name='post_title' defaultChecked={post_title} required />
                         <br />
-                        <input className="form-control" onBlur={handleInputBlur} type="text" name='post_topic' placeholder='Post Topic' required />
+                        <input className="form-control" onBlur={handleInputBlur} type="text" name='post_topic' defaultValue={post_topic} required />
 
                         <br />
                         <button className='btn btn-danger mt-3' type="submit">Add</button>

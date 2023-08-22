@@ -82,7 +82,7 @@ const Infant = () => {
 
 
 
-                        <Link to='/admission'><p className='text-center'><button className='btn btn-danger  apply_now_button'>Apply Now</button></p></Link>
+                        <Link to='/enroll'><p className='text-center'><button className='btn btn-danger  apply_now_button'>Apply Now</button></p></Link>
 
 
 

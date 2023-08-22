@@ -1,0 +1,25 @@
+#subscribe{
+    height: 250px;
+}
+#subscribe h6{
+    color: gray;
+    text-align: center;
+}
+
+.orange-bg{
+    background-color: #fceae8;
+    border-radius: 10px;
+}
+
+.submit{
+    display: flex;
+    width: 501px;
+}
+.buy-now-button{
+    background-image: linear-gradient(to bottom, #FF589B 0%, #FF136F 100%);
+    color: #fff;
+    border: none;
+    border-radius: 1px;
+    padding: 9px 25px;
+    cursor: pointer;
+}

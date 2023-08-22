@@ -16,7 +16,7 @@ const ShowallNurses = () => {
         <div >
             
             <Navbar></Navbar>
-            <h2 style={{color:'#ff347f'}} className='text-center mb-5 mt-5'>All Staffs:</h2>
+            <h2 style={{color:'#ff347f'}} className='text-center mb-5 mt-5'>All Babysitters:</h2>
 
 
             
@@ -35,7 +35,7 @@ const ShowallNurses = () => {
                                         <Card.Body className='text-center'>
                                             <Card.Title>Stuff Name:  {user.name}</Card.Title>
                                             <Card.Text>
-                                                <p><b>Designation: {user.designation}</b></p>
+                                                <p><b>Email: {user.email}</b></p>
                                             </Card.Text>
                                             
                                             <Link to={`/singleStaff/${user._id}`}>

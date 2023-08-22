@@ -42,11 +42,11 @@ const LoginBootstrap = ({children}) => {
         
         <div>
             <Navbar></Navbar>
-            <div className='w-50 mx-auto'>
+            <div className='mx-auto' style={{width:'70%', marginTop:'75px'}}>
             
-            <h3 className='text-primary'>Please Login!!</h3>
+            <h3 className='text-primary text-center'>Please Login!!</h3>
 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} style={{paddingLeft:'240px'}}>
             <div class="mb-3">
                 <label for="formGroupExampleInput" className="form-label">Enter Email</label>
                 <input type="email" name='email' className="form-control" id="formGroupExampleInput" placeholder="Your Email" required/>
@@ -64,7 +64,7 @@ const LoginBootstrap = ({children}) => {
 
         
 
-            <p><small>New to this website? Please <Link to='/register'>Register</Link></small></p>
+            {/* <p style={{paddingLeft:"240px"}}><small >New to this website? Please <Link to='/register'>Register</Link></small></p> */}
         </div>
         </div>
     );

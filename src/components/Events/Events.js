@@ -3,6 +3,8 @@ import Navbar from '../../layout/Navbar/Navbar';
 import Footer from '../../layout/Footer/Footer';
 
 import './Events.css'
+import Camera from '../Webcam/Camera';
+import { Link } from 'react-router-dom';
 
 const Events = () => {
     return (
@@ -69,8 +71,10 @@ const Events = () => {
 
 
                 </div>
+            <button className='btn btn-danger text-center' style={{marginLeft:'500px'}}><Link style={{ color:'white', textCombineUpright:'none'}} to="/camera">See your Children</Link></button>
+            <br />
+            <br />
             </section>
-
 
 
             <Footer></Footer>

@@ -57,7 +57,7 @@ const Subscribers = () => {
     }
     return (
         <div>
-            <section className="container">
+            {/* <section className="container">
                 <div className="row">
                     
 
@@ -69,7 +69,19 @@ const Subscribers = () => {
                         <button className='btn btn-danger mt-3' type="submit">Subscribe</button>
                     </form>
                 </div>
-            </section>
+            </section> */}
+            <div class="container d-flex align-items-center justify-content-center orange-bg" id="subscribe">
+    <div>
+      <h3 className='text-center' style={{color:'#e52159'}}>Join Our News Letter</h3>
+      <h6>Get updates on Events, specials and more</h6>
+      <form action="" onSubmit={handleAddSubscribe}>
+      <div class="submit">
+        <input class="form-control" onBlur={handleServiceBlur} type="text" name='subscribe_email' placeholder="Enter Your Email"/>
+      <button class="buy-now-button" type="submit">SUBMIT</button>
+      </div>
+      </form>
+    </div>
+  </div>
 
         </div>
     );

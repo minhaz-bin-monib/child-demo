@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Enrollment.css'
 import Navbar from '../../layout/Navbar/Navbar';
+import Footer from '../../layout/Footer/Footer';
 
 const Enrollment = () => {
 
@@ -87,12 +88,11 @@ const Enrollment = () => {
                     {isShowForm && <h4 className='text-center mb-3'>Enroll Completed your Enroll Id is: {enroleId}</h4>}
 
                     {/* Enrole Time Open From  */}
-                    { !isShowForm && <h4 className='text-center mb-2'>Enroll Now</h4>}
+                    { !isShowForm && <h2 className='text-center mb-5 mt-5'>Enroll Now</h2>}
                     
 
-                    { !isShowForm &&  <form onSubmit={handleAddEnrollment}>
-                         <h6>Primary Details</h6>
-                         <div className="row">
+                    { !isShowForm &&  <form onSubmit={handleAddEnrollment} style={{width:'100%'}}>
+                         <h6 style={{fontWeight:'700'}}>Primary Details</h6>                         <div className="row">
                         <div className='from-control col-6 mb-3'>
                         <label >Your Name</label>
                         <input className="form-control" onBlur={handleServiceBlur} type="text" name='name' placeholder='Your Name' required />
@@ -138,7 +138,7 @@ const Enrollment = () => {
                         </div>
                        
                         <br />
-                        <h6>Address Details</h6>
+                        <h6 style={{fontWeight:'700'}}>Address Details</h6>
                         <div className='from-control col-6 mb-3'>
                         <label >Address</label>
                         <input className="form-control" onBlur={handleServiceBlur} type="text" name='address' placeholder='Address' required />
@@ -171,7 +171,8 @@ const Enrollment = () => {
                     }
                 
             </section>
-
+                    <br />
+                    <Footer></Footer>
         </div>
     );
 };

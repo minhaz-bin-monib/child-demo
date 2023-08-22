@@ -10,6 +10,8 @@ import nurses from "./HmImage/nurses.png"
 import { Link } from 'react-router-dom';
 import facalitiPic from './HmImage/Childcare-Renovation-Infographic-1-980x1470.png (1).jpg'
 import Subscribers from '../Subcribers/Subscribers';
+import ShowallNurses from '../Babysitters/ShowallNurses';
+import AboutUs from '../AboutUs/AboutUs';
 
 const MainSections = () => {
   return (
@@ -47,7 +49,7 @@ const MainSections = () => {
           <h1>Our Services</h1>
           <div className='col-md-6'>
             <p>We give supervision and care of infants and young children during the daytime, particularly so that their parents can hold jobs. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolores totam ab eius! Laborum.</p>
-            <Link to='/services'><div class="btn btn-danger">See More</div></Link>
+            <Link to='/programs'><div class="btn btn-danger">See More</div></Link>
           </div>
 
           <div className='col-md-6'>
@@ -57,29 +59,47 @@ const MainSections = () => {
         </div>
       </section>
 
+            {/* <section>
+              <ShowallNurses></ShowallNurses>
+            </section> */}
 
 
 
-    <section className="facilities_seciton">
+    {/* <section className="facilities_seciton">
     <div className="facilities_seciton_main_div container">
     <div className="row">
     <h1>Our facilities</h1>
     <img src={facalitiPic} alt="" />
     </div>
     </div>
-    </section>
+    </section> */}
 
 
+<section class="Services-section" id="services">
+        <div class="container">
+          
+          <div className="row">
+          <h1>About Us</h1>
+          
 
+          <div className='col-md-6'>
+            <img src="https://health.clevelandclinic.org/wp-content/uploads/sites/3/2014/09/daycare-901208614-770x553-650x428.jpg" alt="" />
+          </div>
+
+          <div className='col-md-6'>
+            <p>We provide daytime supervision and childcare for newborns and young children, especially so that their parents can work. Sit amet consectetur adipisicing elit lorem ipsum dolor. Dolores, repellat totam ab eius! Laborum.</p>
+          </div>
+          </div>
+        </div>
+      </section>
 
       
 
-
-      <ContactUs></ContactUs>
+    
 
 
       <Subscribers></Subscribers>
-
+            <br />
       <Footer></Footer>
 
 

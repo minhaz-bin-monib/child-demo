@@ -3,6 +3,8 @@ import emailjs from '@emailjs/browser';
 
 
 import './ContactUs.css'
+import Navbar from '../../layout/Navbar/Navbar';
+import Footer from '../../layout/Footer/Footer';
 
 const ContactUs = () => {
 
@@ -84,7 +86,7 @@ const ContactUs = () => {
 }
   return (
     <div>
-
+      <Navbar></Navbar>
       <div className='container contactUs_main_div' style={{ backgroudColor: 'red' }}>
         <div className="row " >
           <h2 className='text-center mt-5 mb-5'>Contact Us</h2>
@@ -130,7 +132,10 @@ const ContactUs = () => {
           </form>
         </div>
       </div>
-
+      <br />
+      <br />
+      <br />
+    <Footer></Footer>
 
       {/* <section class="map row">
         <iframe

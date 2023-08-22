@@ -7,14 +7,30 @@ import { Table } from 'react-bootstrap';
 
 const ManageService = () => {
     const services = useLoaderData();
+    const {service_name, _id} = services;
     const [service, setService] = useState(services);
+    console.log(_id,services);
+    
 
-    const handleUpdate = () =>{
+    
 
-    }
+    const handleDelete = servic => {
 
-    const handleDelete = () =>{
+        const agree = window.confirm(`Are you sure you want to delete: ${servic.service_name}`);
 
+        if (agree) {
+            
+
+            fetch(`http://localhost:5000/services/${servic._id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                   
+                    window.location.href = '/dashboard/manageService'
+
+                });
+        }
     }
 
     return (
@@ -49,16 +65,16 @@ const ManageService = () => {
                                         <tr>
                                             <td>{index + 1}</td>
                                             <td>{servic.service_name}</td>
-                                            <td>{servic.service_details}</td>
+                                            <td>{servic.currentDate}</td>
                                             
                                             <td>
 
                                                 {/* <Link className='' to={`/dashboard/unreadEnquiryDetails/${enqer._id}`}><AiOutlineEye></AiOutlineEye></Link> */}
 
 
-                                                <a href="" style={{textDecoration:'none'}} onClick={handleUpdate}><i class="bi bi-pencil-square"></i> | </a>
+                                                <a href={`/dashboard/updateService/${servic._id}`} style={{textDecoration:'none'}} ><i class="bi bi-pencil-square"></i> | </a>
                                                  
-                                                <a href="" style={{color:'red'}} onClick={handleDelete}><i class="bi bi-trash-fill"></i></a>
+                                                <a href="" style={{color:'red'}} onClick={() => handleDelete(servic)}><i class="bi bi-trash-fill"></i></a>
 
 
 
