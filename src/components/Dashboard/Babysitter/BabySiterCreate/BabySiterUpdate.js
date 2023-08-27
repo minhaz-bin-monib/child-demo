@@ -26,21 +26,30 @@ const BabySiterUpdate = () => {
         // This arrangement can be altered based on how we want the date's format to appear.
         let currentDate = `${day}-${month}-${year}`;
 
+        const form = event.target;
+
+        const name = form.name.value;
+        const address = form.address.value;
+
+        const email = form.email.value;
+        const number = form.number.value;
+
+        const city = form.city.value;
+        const state = form.state.value;
+
+        
+
+        const imageURL = form.imageURL.value;
+        const language = form.language.value;
+
+        const certificate = form.certificate.value;
+        const experience = form.experience.value;
+        const description = form.description.value;
+        
+
 
         const eventData = {
-            name: user.name,
-            address: user.address,
-            email: user.email,
-            number: user.number,
-            city: user.city,
-            state: user.state,
-            language: user.language,
-            currentDate: currentDate,
-            imageURL: imageURL,
-
-            experience: user.experience,
-            certificate: user.certificate,
-            description: user.description
+            city, number, email, address, name, description, experience, certificate, language, imageURL, currentDate, state
         }
         console.log(eventData);
 
@@ -65,14 +74,14 @@ const BabySiterUpdate = () => {
     }
 
 
-    const handleInputBlur = event => {
-        const value = event.target.value;
-        const field = event.target.name;
-        const newUser = { ...user };
-        newUser[field] = value;
-        setUser(newUser);
+    // const handleInputBlur = event => {
+    //     const value = event.target.value;
+    //     const field = event.target.name;
+    //     const newUser = { ...user };
+    //     newUser[field] = value;
+    //     setUser(newUser);
 
-    }
+    // }
     return (
 
         <section className="manage_service_main_section">
@@ -86,27 +95,27 @@ const BabySiterUpdate = () => {
                 <div className="col-md-10 manage_service_main_div" >
                     <h2>Update BabySiter: </h2>
                     <form onSubmit={handleUpdateUser}>
-                        <input className="form-control" onBlur={handleInputBlur} defaultValue={name} type="text" name='name' placeholder='name' />
+                        <input className="form-control"   defaultValue={name} type="text" name='name' placeholder='name' required />
                         <br />
-                        <input className="form-control" onBlur={handleInputBlur} defaultValue={address} type="text" name='address' placeholder='address' />
+                        <input className="form-control"   defaultValue={address} type="text" name='address' placeholder='address' />
                         <br />
-                        <input className="form-control" onBlur={handleInputBlur} defaultValue={email} type="email" name='email' id="" placeholder='email' />
+                        <input className="form-control"   defaultValue={email} type="email" name='email' id="" placeholder='email' />
                         <br />
-                        <input className="form-control" onBlur={handleInputBlur} type="text" defaultValue={number} name='number' id="" placeholder='number' />
+                        <input className="form-control"   type="text" defaultValue={number} name='number' id="" placeholder='number' />
                         <br />
-                        <input className="form-control" onBlur={handleInputBlur} type="text" defaultValue={city} name='city' id="" placeholder='city' />
+                        <input className="form-control"   type="text" defaultValue={city} name='city' id="" placeholder='city' />
                         <br />
-                        <input className="form-control" onBlur={handleInputBlur} type="text" defaultValue={state} name='state' id="" placeholder='state' />
+                        <input className="form-control"   type="text" defaultValue={state} name='state' id="" placeholder='state' />
                         <br />
-                        <input className="form-control" onBlur={handleInputBlur} type="text" defaultValue={language} name='language' id="" placeholder='language' />
+                        <input className="form-control"   type="text" defaultValue={language} name='language' id="" placeholder='language' />
                         <br />
-                        <input className="form-control" onBlur={handleInputBlur} type="text" defaultValue={experience} name='experience' id="" placeholder='experience' />
+                        <input className="form-control"   type="text" defaultValue={experience} name='experience' id="" placeholder='experience' />
                         <br />
-                        <input className="form-control" onBlur={handleInputBlur} type="text" defaultValue={certificate} name='certificate' id="" placeholder='certificate' />
+                        <input className="form-control"   type="text" defaultValue={certificate} name='certificate' id="" placeholder='certificate' />
                         <br />
-                        <input className="form-control" onBlur={handleInputBlur} type="text" defaultValue={description} name='description' id="" placeholder='description' />
+                        <input className="form-control"   type="text" defaultValue={description} name='description' id="" placeholder='description' />
                         <br />
-                        <input className="form-control" onBlur={handleInputBlur} type="text" defaultValue={imageURL} name='imageURL' id="" placeholder='imageURL' />
+                        <input className="form-control"   type="text" defaultValue={imageURL} name='imageURL' id="" placeholder='imageURL' />
                         <br />
 
                         <button className='btn btn-warning mt-3' type="submit">Update User</button>

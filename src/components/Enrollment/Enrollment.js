@@ -23,6 +23,7 @@ const Enrollment = () => {
         let currentDate = `${year}-${month}-${day}`;
         console.log(currentDate); // "2022-05-27"
 
+
         const eventData = {
             name: enrollment.name,
             mobile1: enrollment.mobile1,
@@ -39,6 +40,7 @@ const Enrollment = () => {
             country: enrollment.country,
             landmark: enrollment.landmark,
             currentDate : currentDate,
+            paymentStatus : "unpaid",     
             status: "New"
         }
         console.log(eventData);

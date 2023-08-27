@@ -8,7 +8,7 @@ import { useLoaderData } from 'react-router-dom';
 const SingleStaff = () => {
 
     const users = useLoaderData();
-    const {_id, name, address, email, imageURL,designation, qualification} = users;
+    const {_id, name, address, email, imageURL,designation, qualification, certificate, number} = users;
 
 
     return (
@@ -17,11 +17,12 @@ const SingleStaff = () => {
             <section className="s_main_section container mt-5">
                 <div className="s_main_div row">
                 <img src={imageURL} className='img-fluid' alt="" />
-            <h2>Name: {name}</h2>
-            <p><b>Address</b>: {address}</p>
-            <p><b>Email</b>: {email}</p>
-            <p><b>Designation</b>: {designation}</p>
-            <p><b>Qualification</b>: {qualification}</p>
+                
+            <h2 style={{paddingLeft:'407px'}}>Name: {name}</h2>
+            <p style={{paddingLeft:'407px'}}><b>Address</b>: {address}</p>
+            <p style={{paddingLeft:'407px'}}><b>Email</b>: {email}</p>
+            <p style={{paddingLeft:'407px'}}><b>Phone No</b>: {number}</p>
+            <p style={{paddingLeft:'407px'}}><b>Certification</b>: {certificate}</p>
                 </div>
             </section>
 

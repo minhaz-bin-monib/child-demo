@@ -41,7 +41,7 @@ const UnreadEnquiry = () => {
    
     return (
         <div>
-            <Maindashboard></Maindashboard> <span style={{ display: 'block', height: '60px', width: '1100px', backgroundColor: 'ghostwhite', marginLeft: '256px' }}></span>
+            <Maindashboard></Maindashboard> <span className='dashboard_nav'></span>
             
 
 

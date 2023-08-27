@@ -24,17 +24,30 @@ const Services = () => {
                 <div className="container">
                     <h2>Our Given Services</h2>
 
-                    <div className="row">
+                    <div className='row' style={{ paddingBottom: '20px' }}>
                         {service.map(
                             service =>
-                                <>
-                                <div className="col-md-6">
-                                    <img src="" alt="" />
+                                <div style={{ width: '50%', paddingBottom: '50px' }}>
+                                    <div className=''>
+                                        <div className='row'>
+                                            <div className="col-md-6">
+                                                <img src={service.imageURL} alt=""  className='img-fluid' />
+                                            </div>
+                                            <div className="col-md-6">
+                                                <h3>                                    {service.service_name}
+                                                </h3>
+                                                <p>                                    {service.service_details}
+                                                </p>
+                                            </div>
+
+                                            <br></br>
+                                        </div>
+                                    </div>
+
+
+
                                 </div>
-                                <div className="col-md-6">
-                                    {service.service_name}
-                                    {service.service_details}
-                                </div></>
+
                         )
 
                         }

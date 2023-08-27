@@ -59,6 +59,10 @@ const Navbar = () => {
 
                                 </li>
                                 <li className="nav-item">
+                                    <a className="nav-link" target='_blank' href='#'><Link className='main-text-style' to='/payment'>Payment</Link></a>
+
+                                </li>
+                                <li className="nav-item">
                                     <a className="nav-link" target='_blank' href='#'><Link className='main-text-style' to='/dashboard'>Admin</Link></a>
 
                                 </li>

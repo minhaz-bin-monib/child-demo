@@ -9,7 +9,6 @@ import OtherSections from "./components/LoginBootstrap";
 import MainSections from "./components/HomePage/MainSections";
 import AddNurse from "./components/Dashboard/AddNurse/AddNurse";
 import ShowallNurses from "./components/Babysitters/ShowallNurses";
-import Payment from "./components/Payment";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import MainProgram from "./components/Programs/MainProgram/MainProgram";
 import Toddler from "./components/Programs/Toddler/Toddler";
@@ -51,6 +50,7 @@ import ContactUsControll from "./components/Dashboard/ContactUsControll/ContactU
 import ServiceUpdate from "./components/Dashboard/ServiceControls/ManageService/ServiceUpdate";
 import ContactUs from "./components/ContactUs/ContactUs";
 import Camera from "./components/Webcam/Camera";
+import Payment from "./components/Payment/Payment";
 
 const router = createBrowserRouter([
   {
@@ -194,10 +194,19 @@ const router = createBrowserRouter([
 
       
        // ************************* Report End***********************
+
+
+
+       // ************************* Payment Start***********************
       {
         path : '/payment',
         element : <Payment></Payment>
       },
+
+
+
+
+      // ************************* Payment End***********************
       {
         path : '/programs',
         element : <MainProgram></MainProgram>

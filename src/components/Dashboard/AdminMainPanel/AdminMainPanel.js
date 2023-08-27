@@ -146,7 +146,7 @@ const AdminMainPanel = () => {
                                     <div class="icon">
                                         <i class="fa fa-users"></i>
                                     </div>
-                                    <a href="/dashboard/enrolment" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+                                    <a href="/dashboard/newEnrolment" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-sm-6">
