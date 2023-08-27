@@ -139,12 +139,17 @@
             {
                 "title": "Profile",
                 "icon": "bi-person",
-                "path": ""
+                "path": "/dashboard/profile"
             },
             {
-                "title": "Logout",
+                "title": "Passwrord Change",
+                "icon": "bi-file-lock2",
+                "path": "/dashboard/passwordChange"
+            },
+            {
+                "title": "Sign Out",
                 "icon": "bi-box-arrow-right",
-                "path": "/"
+                "path": "/dashboard/signout"
             }
         ]
     }

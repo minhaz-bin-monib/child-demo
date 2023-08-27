@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import './ContactUs.css'
 import Navbar from '../../layout/Navbar/Navbar';
 import Footer from '../../layout/Footer/Footer';
+import { useLoaderData } from 'react-router-dom';
 
 const ContactUs = () => {
 
@@ -22,12 +23,15 @@ const ContactUs = () => {
   // };
   // ref={form} onSubmit={sendEmail}
 
+  const ContactInfo = useLoaderData();
+  const [contact, setContact] = useState(ContactInfo);
+
   const [enquery, srtEnquery] = useState({});
 
 
   const handleAddEnquiry = event => {
     event.preventDefault();
-    
+
     const date = new Date();
 
     let day = date.getDate();
@@ -39,13 +43,13 @@ const ContactUs = () => {
     console.log(currentDate); // "17-6-2022"
 
     const eventData = {
-      first_name : enquery.first_name,
+      first_name: enquery.first_name,
       last_name: enquery.last_name,
       phone: enquery.phone,
       email: enquery.email,
       message: enquery.message,
-      currentDate : currentDate,
-      status : 'new'
+      currentDate: currentDate,
+      status: 'new'
 
     }
     console.log(eventData);
@@ -53,20 +57,20 @@ const ContactUs = () => {
     const url = 'http://localhost:5000/enquiry';
 
     fetch(url, {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify(eventData)
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(eventData)
     })
-        .then(res => res.json())
-        .then(data => {
-            if (data.acknowledged) {
-                alert('Thank you. We will Contact with you soon');
-                event.target.reset();
-            }
-        })
-}
+      .then(res => res.json())
+      .then(data => {
+        if (data.acknowledged) {
+          alert('Thank you. We will Contact with you soon');
+          event.target.reset();
+        }
+      })
+  }
 
 
 
@@ -83,14 +87,25 @@ const ContactUs = () => {
     newEnquery[field] = value;
     srtEnquery(newEnquery);
 
-}
+  }
   return (
     <div>
       <Navbar></Navbar>
       <div className='container contactUs_main_div' style={{ backgroudColor: 'red' }}>
         <div className="row " >
           <h2 className='text-center mt-5 mb-5'>Contact Us</h2>
+          <div className='row' style={{paddingLeft:'70px', textAlign:'center'}}>
+            {
+              contact.map(con =>
+                <>
+                <p>Address: {con.c_address}</p>
+                <p>Phone: {con.c_phone}</p>
+                <p>Email: {con.c_email}</p>
+                </>
+              )
 
+            }
+          </div>
 
 
           <form onSubmit={handleAddEnquiry} className='contact_us_form'>
@@ -123,7 +138,7 @@ const ContactUs = () => {
 
               <div class="col">
                 <br />
-                <textarea class="form-control"   onBlur={handleServiceBlur} placeholder='Message' name='message' id="" cols="30" rows="10"></textarea>
+                <textarea class="form-control" onBlur={handleServiceBlur} placeholder='Message' name='message' id="" cols="30" rows="10"></textarea>
               </div>
 
               <button className='btn btn-danger mt-3 w-100' type="submit">Contact Us</button>
@@ -135,7 +150,7 @@ const ContactUs = () => {
       <br />
       <br />
       <br />
-    <Footer></Footer>
+      <Footer></Footer>
 
       {/* <section class="map row">
         <iframe

@@ -87,7 +87,7 @@ const Enrollment = () => {
 
             <section className="container">
                     {/* Successfully Enrole */}
-                    {isShowForm && <h4 className='text-center mb-3'>Enroll Completed your Enroll Id is: {enroleId}</h4>}
+                    {isShowForm && <h4 className='text-center mb-3'>Enroll Completed your Enroll Id is: {enroleId} <br /> <a href="http://localhost:3000/payment" className='btn btn-success'>Payment</a></h4>}
 
                     {/* Enrole Time Open From  */}
                     { !isShowForm && <h2 className='text-center mb-5 mt-5'>Enroll Now</h2>}

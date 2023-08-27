@@ -51,6 +51,9 @@ import ServiceUpdate from "./components/Dashboard/ServiceControls/ManageService/
 import ContactUs from "./components/ContactUs/ContactUs";
 import Camera from "./components/Webcam/Camera";
 import Payment from "./components/Payment/Payment";
+import Profile from "./components/Dashboard/Account/Profile/Profile";
+import PasswordChange from "./components/Dashboard/Account/PasswordChange/PasswordChange";
+import Logout from "./components/Dashboard/Account/Logout/Logout";
 
 const router = createBrowserRouter([
   {
@@ -326,7 +329,8 @@ const router = createBrowserRouter([
 
        {
         path : '/dashboard/contactUsControll',
-        element : <ContactUsControll></ContactUsControll>
+        element : <ContactUsControll></ContactUsControll>,
+        loader: () => fetch('http://localhost:5000/contactUs')
       },
       // ************************* contactUS controll End***********************
 
@@ -335,7 +339,9 @@ const router = createBrowserRouter([
 
       {
         path : '/contact',
-        element : <ContactUs></ContactUs>
+        element : <ContactUs></ContactUs>,
+        loader: () => fetch('http://localhost:5000/contactUs')
+
       },
       // ************************* contactUS main section End***********************
 
@@ -351,8 +357,34 @@ const router = createBrowserRouter([
       // ************************* AboutUs mainpage End***********************
 
 
+
+
+      // ************************* Account dashboard Start***********************
+
+
+      ,
+      {
+        path : '/dashboard/profile',
+        element : <Profile></Profile>,
+        
+      },
+      {
+        path : '/dashboard/passwordChange',
+        element : <PasswordChange></PasswordChange>
+        
+      },
+      {
+        path : '/dashboard/signout',
+        element : <Logout></Logout>
+        
+      }
+
       
-      
+
+
+
+      // ************************* Account dashboard Start***********************
+
 
 
     ]
